@@ -1,0 +1,12 @@
+C:\Users\User\Source\Repos\DVLDWinForm\bin\Debug\DVLDWinForm.exe.config
+C:\Users\User\Source\Repos\DVLDWinForm\bin\Debug\DVLDWinForm.exe
+C:\Users\User\Source\Repos\DVLDWinForm\bin\Debug\DVLDWinForm.pdb
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.ctrlPersonCard.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Form1.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Properties.Resources.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.exe
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.pdb
