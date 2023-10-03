@@ -10,3 +10,5 @@ C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.GenerateReso
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.exe
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.pdb
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.ctrlPersonCardWithFilter.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.ctrlUserCard.resources
