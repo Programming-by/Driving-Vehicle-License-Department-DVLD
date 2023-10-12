@@ -12,3 +12,11 @@ C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.exe
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.pdb
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.ctrlPersonCardWithFilter.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.ctrlUserCard.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormShowAllPeople.resources
+C:\Users\User\Source\Repos\DVLDWinForm\bin\Debug\DVLDBusinessLayer.dll
+C:\Users\User\Source\Repos\DVLDWinForm\bin\Debug\DVLDDataAccessLayer.dll
+C:\Users\User\Source\Repos\DVLDWinForm\bin\Debug\DVLDBusinessLayer.pdb
+C:\Users\User\Source\Repos\DVLDWinForm\bin\Debug\DVLDDataAccessLayer.pdb
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.CopyComplete
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormAddEditPerson.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormShowPersonDetails.resources

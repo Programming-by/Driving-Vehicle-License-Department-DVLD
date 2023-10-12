@@ -70,6 +70,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddEditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddEditPerson.Designer.cs">
+      <DependentUpon>FormAddEditPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowAllPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowAllPeople.Designer.cs">
+      <DependentUpon>FormShowAllPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowPersonDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowPersonDetails.Designer.cs">
+      <DependentUpon>FormShowPersonDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ctrlPersonCard.resx">
@@ -83,6 +101,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddEditPerson.resx">
+      <DependentUpon>FormAddEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowAllPeople.resx">
+      <DependentUpon>FormShowAllPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowPersonDetails.resx">
+      <DependentUpon>FormShowPersonDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,6 +136,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\person_boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DVLDBusinessLayer\DVLDBusinessLayer.csproj">
+      <Project>{89ee6d4e-f726-45cc-8e7b-cb577c8074e1}</Project>
+      <Name>DVLDBusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_girl %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_girl %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_girl 1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

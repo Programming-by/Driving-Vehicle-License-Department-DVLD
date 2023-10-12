@@ -117,20 +117,48 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="person_boy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\person_boy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pbImage.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        UQAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="person_girl (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person_girl (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="person_boy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\person_boy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="person_girl (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person_girl (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="person_girl 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person_girl 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>172, 17</value>
+  </metadata>
 </root>

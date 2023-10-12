@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace DVLDWinForm
 {
-    public partial class Form1 : Form
+    public partial class FormShowPersonDetails : Form
     {
-        public Form1()
+
+
+        public FormShowPersonDetails()
         {
             InitializeComponent();
+
+
+
         }
 
-        private void btnShowAllPeople_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            FormShowAllPeople frm = new FormShowAllPeople();
-
-            frm.ShowDialog();
+            this.Close();   
         }
     }
 }
