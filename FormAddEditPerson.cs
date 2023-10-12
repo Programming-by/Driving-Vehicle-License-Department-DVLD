@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Xml.Linq;
+using System.Collections;
 
 namespace DVLDWinForm
 {
@@ -253,31 +254,19 @@ namespace DVLDWinForm
 
         private void _SaveImageToFile()
         {
-            
+
             Guid ImageID = Guid.NewGuid();
 
-            string ImageName;
+            string ImageName = Path.GetFileName(pbImage.ImageLocation);
 
-            ImageName = ImageID.ToString();
+            string NewImageName = ImageID.ToString() + ".png";
 
-           // string SourceFile = pbImage.ImageLocation;
-            string SourceFolder = @"C:\";
+            string sourceDir = @"c:\";
+            string backupDir = @"c:\DVLD-People-Images\";
 
-            string Destination_Folder = @"C:\DVLD_People_Images\";
-
-            try
-            {
-                //File.Copy(SourceFile, Destination_Folder,true); no error but doesn't copy
-                
-                File.Copy(SourceFolder, Path.Combine(Destination_Folder, ImageName));
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
+            string PreviousImage = ImageName.Substring(sourceDir.Length - 3) ;
+            File.Copy(Path.Combine(sourceDir, PreviousImage), Path.Combine(backupDir, NewImageName), true);
+         
         }
 
 
@@ -321,18 +310,18 @@ namespace DVLDWinForm
 
             _Person.ImagePath = pbImage.ImageLocation;
             _Person.Address = txtAddress.Text;
-            _SaveImageToFile();
 
-            //if (_Person.Save())
-            //{
+            if (_Person.Save())
+            {
 
-            // //   _SaveImageToFile();
-            //    MessageBox.Show("Data Saved Successfully");
-            //} else
-            //{
-            //    MessageBox.Show("Data To Save");
+                  _SaveImageToFile();
+                MessageBox.Show("Data Saved Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Data To Save");
 
-            //}
+            }
 
 
         }
