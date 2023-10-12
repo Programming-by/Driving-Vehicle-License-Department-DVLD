@@ -16,10 +16,13 @@ using System.Collections;
 
 namespace DVLDWinForm
 {
-    // Save Image To File By Guid
  
     public partial class FormAddEditPerson : Form
     {
+
+        string backupDir = @"c:\DVLD-People-Images\";
+        public string NewImageName = "";
+
         public enum enMode { AddNew = 0 , Update = 1}
 
         enMode _Mode;
@@ -252,26 +255,28 @@ namespace DVLDWinForm
 
         }
 
-        private void _SaveImageToFile()
+      
+      
+        private void _SaveImageToFile(Guid ImageID)
         {
 
-            Guid ImageID = Guid.NewGuid();
+             NewImageName = ImageID.ToString() + ".png";
 
-            string ImageName = Path.GetFileName(pbImage.ImageLocation);
 
-            string NewImageName = ImageID.ToString() + ".png";
+            string previousDirectory = pbImage.ImageLocation;
 
-            string sourceDir = @"c:\";
-            string backupDir = @"c:\DVLD-People-Images\";
+            string ImageName = previousDirectory.Split('\\').Last(); // get image name
 
-            string PreviousImage = ImageName.Substring(sourceDir.Length - 3) ;
-            File.Copy(Path.Combine(sourceDir, PreviousImage), Path.Combine(backupDir, NewImageName), true);
-         
+            int count = previousDirectory.Length - ImageName.Length; 
+            previousDirectory = previousDirectory.Substring(0, count); // get folder name
+            File.Copy(Path.Combine(previousDirectory,ImageName), Path.Combine(backupDir, NewImageName), true);
+
         }
 
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            Guid ImageID = Guid.NewGuid();
 
             int CountryID = clsCountryData.Find(cbCountries.Text).CountryID;
 
@@ -308,18 +313,18 @@ namespace DVLDWinForm
 
             _Person.NationalityCountryID = CountryID;
 
-            _Person.ImagePath = pbImage.ImageLocation;
+            _Person.ImagePath = backupDir + ImageID;
             _Person.Address = txtAddress.Text;
 
             if (_Person.Save())
             {
 
-                  _SaveImageToFile();
+                _SaveImageToFile(ImageID);
                 MessageBox.Show("Data Saved Successfully");
             }
             else
             {
-                MessageBox.Show("Data To Save");
+                MessageBox.Show("Failed To Save");
 
             }
 
