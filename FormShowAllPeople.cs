@@ -20,6 +20,7 @@ namespace DVLDWinForm
             InitializeComponent();
         }
 
+
         private void _RefreshPeopleList()
         {
             dgvAllPeople.DataSource = clsPersonData.GetAllPeople();
@@ -41,7 +42,9 @@ namespace DVLDWinForm
 
         private void btnAddNewPerson_Click(object sender, EventArgs e)
         {
-            FormAddEditPerson frm = new FormAddEditPerson(-1, dgvAllPeople);
+            FormAddEditPerson frm = new FormAddEditPerson(-1);
+
+            frm.GetAllPeople(dgvAllPeople);
 
             frm.ShowDialog();
 
@@ -57,16 +60,23 @@ namespace DVLDWinForm
         {
             FormShowPersonDetails frm = new FormShowPersonDetails();
 
-            ctrlPersonCard.PersonID = (int)dgvAllPeople.CurrentRow.Cells[0].Value;
-            ctrlPersonCard.AllPeople = dgvAllPeople;
+            ctrlPersonCard.LoadPersonInfo((int)dgvAllPeople.CurrentRow.Cells[0].Value) ;
+
+   
+            ctrlPersonCard.GetAllPeople(dgvAllPeople);
+
 
             frm.ShowDialog();
         }
         private void addNewPersonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAddEditPerson frm = new FormAddEditPerson(-1, dgvAllPeople);
+            FormAddEditPerson frm = new FormAddEditPerson(-1);
+
+            frm.GetAllPeople(dgvAllPeople);
 
             frm.ShowDialog();
+
+            
 
             _RefreshPeopleList();
 
@@ -74,7 +84,9 @@ namespace DVLDWinForm
         }
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAddEditPerson frm = new FormAddEditPerson((int)dgvAllPeople.CurrentRow.Cells[0].Value, dgvAllPeople);
+            FormAddEditPerson frm = new FormAddEditPerson((int)dgvAllPeople.CurrentRow.Cells[0].Value);
+
+            frm.GetAllPeople(dgvAllPeople);
 
             frm.ShowDialog();
 

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsGlobal.cs" />
     <Compile Include="ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -76,17 +77,71 @@
     <Compile Include="FormAddEditPerson.Designer.cs">
       <DependentUpon>FormAddEditPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddEditUser.Designer.cs">
+      <DependentUpon>FormAddEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePassword.Designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageApplicationTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageApplicationTypes.Designer.cs">
+      <DependentUpon>FormManageApplicationTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageTestTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageTestTypes.Designer.cs">
+      <DependentUpon>FormManageTestTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormShowAllPeople.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormShowAllPeople.Designer.cs">
       <DependentUpon>FormShowAllPeople.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormShowAllUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowAllUsers.Designer.cs">
+      <DependentUpon>FormShowAllUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormShowPersonDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormShowPersonDetails.Designer.cs">
       <DependentUpon>FormShowPersonDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowUserDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowUserDetails.Designer.cs">
+      <DependentUpon>FormShowUserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateApplicationType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateApplicationType.Designer.cs">
+      <DependentUpon>FormUpdateApplicationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateTestType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateTestType.Designer.cs">
+      <DependentUpon>FormUpdateTestType.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,11 +160,38 @@
     <EmbeddedResource Include="FormAddEditPerson.resx">
       <DependentUpon>FormAddEditPerson.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddEditUser.resx">
+      <DependentUpon>FormAddEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageApplicationTypes.resx">
+      <DependentUpon>FormManageApplicationTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageTestTypes.resx">
+      <DependentUpon>FormManageTestTypes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormShowAllPeople.resx">
       <DependentUpon>FormShowAllPeople.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormShowAllUsers.resx">
+      <DependentUpon>FormShowAllUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormShowPersonDetails.resx">
       <DependentUpon>FormShowPersonDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowUserDetails.resx">
+      <DependentUpon>FormShowUserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateApplicationType.resx">
+      <DependentUpon>FormUpdateApplicationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateTestType.resx">
+      <DependentUpon>FormUpdateTestType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,6 +233,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\person_girl 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 721.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Person 40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Person 72.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

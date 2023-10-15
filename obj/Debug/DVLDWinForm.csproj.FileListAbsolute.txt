@@ -20,3 +20,12 @@ C:\Users\User\Source\Repos\DVLDWinForm\bin\Debug\DVLDDataAccessLayer.pdb
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.CopyComplete
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormAddEditPerson.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormShowPersonDetails.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormLogin.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormShowAllUsers.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormShowUserDetails.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormChangePassword.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormAddEditUser.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormManageApplicationTypes.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormUpdateApplicationType.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormManageTestTypes.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormUpdateTestType.resources

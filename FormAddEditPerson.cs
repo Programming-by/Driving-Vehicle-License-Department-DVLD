@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Xml.Linq;
 using System.Collections;
+using System.Reflection;
 
 namespace DVLDWinForm
 {
@@ -29,16 +30,17 @@ namespace DVLDWinForm
 
         int _PersonID;
 
-        DataGridView _AllPeople;
+       public DataGridView AllPeople { get; set; }
 
         clsPersonData _Person;
-        public FormAddEditPerson(int PersonID , DataGridView AllPeople)
+
+
+        public FormAddEditPerson(int PersonID)
         {
             InitializeComponent();
 
             _PersonID = PersonID;
 
-            _AllPeople = AllPeople;
 
             if (_PersonID == -1)
             {
@@ -47,6 +49,12 @@ namespace DVLDWinForm
             {
                _Mode = enMode.Update;
             }
+            AllPeople = new DataGridView();
+        }
+
+        public void GetAllPeople(DataGridView dgvAllPeople)
+        {
+            AllPeople = dgvAllPeople;
         }
 
         private void _ShowDateOver18Years()
@@ -112,10 +120,12 @@ namespace DVLDWinForm
             }
             cbCountries.SelectedIndex = cbCountries.FindString(clsCountryData.Find(_Person.NationalityCountryID).CountryName);
 
-            if (_Person.ImagePath != "" )
+            if (_Person.ImagePath != "")
             {
-                pbImage.Load(_Person.ImagePath);
+                 pbImage.Load(_Person.ImagePath + ".png");
+
             }
+            
 
             txtAddress.Text = _Person.Address;
 
@@ -140,19 +150,7 @@ namespace DVLDWinForm
 
         private void FormAddEditPerson_Load(object sender, EventArgs e)
         {
-            _LoadData();
-            txtNationalNo.Text = "n6";
-            txtFirstName.Text = "Anas";
-            txtSecondName.Text = "Wajeh";
-            txtThirdName.Text = "Mohammed";
-            txtLastName.Text = "Naamneh";
-            rbMale.Checked = true;
-            txtPhone.Text = "44775";
-            txtEmail.Text = "a@gmail.com";
-            dateTimePicker1.Value = new DateTime(1996,11,23);
-            txtAddress.Text = "Amman";
-
-          
+            _LoadData();   
         }
 
         private void rbMale_CheckedChanged(object sender, EventArgs e)
@@ -168,11 +166,11 @@ namespace DVLDWinForm
 
         private void CheckIfNationalNoExist(CancelEventArgs e)
         {
-            _AllPeople.DataSource = clsPersonData.GetAllPeople();
+            AllPeople.DataSource = clsPersonData.GetAllPeople();
 
             string NationalNo = "";
 
-            foreach (DataGridViewRow row in _AllPeople.Rows)
+            foreach (DataGridViewRow row in AllPeople.Rows)
             {
                 NationalNo = row.Cells["NationalNo"].Value.ToString().ToLower();
                 if (txtNationalNo.Text.ToLower() == NationalNo) { 
@@ -255,8 +253,8 @@ namespace DVLDWinForm
 
         }
 
-      
-      
+
+
         private void _SaveImageToFile(Guid ImageID)
         {
 
@@ -270,6 +268,11 @@ namespace DVLDWinForm
             int count = previousDirectory.Length - ImageName.Length; 
             previousDirectory = previousDirectory.Substring(0, count); // get folder name
             File.Copy(Path.Combine(previousDirectory,ImageName), Path.Combine(backupDir, NewImageName), true);
+
+
+           // string ImageToDelete = _Person.ImagePath;
+
+          //  File.Delete(ImageToDelete + ".png");
 
         }
 
@@ -320,6 +323,7 @@ namespace DVLDWinForm
             {
 
                 _SaveImageToFile(ImageID);
+
                 MessageBox.Show("Data Saved Successfully");
             }
             else

@@ -15,25 +15,32 @@ namespace DVLDWinForm
     public partial class ctrlPersonCard : UserControl
     {
 
-       public static int PersonID { get; set; }
+       private static int _PersonID { get; set; }
        public static DataGridView AllPeople { get; set; }
 
-        
-
         clsPersonData _Person;
+
+        clsCountryData Country;
         public ctrlPersonCard()
         {
             InitializeComponent();
+            AllPeople = new DataGridView();
 
-           
+
         }
 
 
+        public static void GetAllPeople(DataGridView dgvAllPeople)
+        {
+            AllPeople = dgvAllPeople;
 
+        }
 
         private void linkLabel1EditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormAddEditPerson frm = new FormAddEditPerson(PersonID,AllPeople);
+            FormAddEditPerson frm = new FormAddEditPerson(_PersonID);
+
+            frm.GetAllPeople(AllPeople);
 
             frm.ShowDialog();
 
@@ -41,11 +48,14 @@ namespace DVLDWinForm
 
         private void ctrlPersonCard_Load(object sender, EventArgs e)
         {
-          _Person = clsPersonData.Find(PersonID);
+          _Person = clsPersonData.Find(_PersonID);
+           if ( _Person == null )
+            {
+                return;
+            }
+             Country = clsCountryData.Find(_Person.NationalityCountryID);
 
-            clsCountryData Country = clsCountryData.Find(_Person.NationalityCountryID);
-
-            lblPersonID.Text = PersonID.ToString();
+            lblPersonID.Text = _PersonID.ToString();
             lblName.Text = _Person.FullName();
             lblNationalNo.Text = _Person.NationalNo;
             if (_Person.Gendor == 0)
@@ -73,5 +83,12 @@ namespace DVLDWinForm
 
 
         }
+  
+      public static void LoadPersonInfo(int PersonID)
+        {
+            _PersonID = PersonID;
+        }
+
+      
     }
 }

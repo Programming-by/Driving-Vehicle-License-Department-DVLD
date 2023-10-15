@@ -30,15 +30,15 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pbImage = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblNationalNo = new System.Windows.Forms.Label();
+            this.lblGendor = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblPersonID = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.lblCountry = new System.Windows.Forms.Label();
+            this.lblDateOfBirth = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,12 +49,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbLoginInformation = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblIsActive = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblUserID = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.linkLabel1EditPersonInfo = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.gbLoginInformation.SuspendLayout();
@@ -62,16 +63,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.linkLabel1EditPersonInfo);
             this.groupBox1.Controls.Add(this.pbImage);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.lblAddress);
+            this.groupBox1.Controls.Add(this.lblEmail);
+            this.groupBox1.Controls.Add(this.lblNationalNo);
+            this.groupBox1.Controls.Add(this.lblGendor);
+            this.groupBox1.Controls.Add(this.lblName);
+            this.groupBox1.Controls.Add(this.lblPersonID);
+            this.groupBox1.Controls.Add(this.lblPhone);
+            this.groupBox1.Controls.Add(this.lblCountry);
+            this.groupBox1.Controls.Add(this.lblDateOfBirth);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -100,96 +102,96 @@
             this.pbImage.TabIndex = 18;
             this.pbImage.TabStop = false;
             // 
-            // label18
+            // lblAddress
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(134, 263);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(74, 25);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "[????]";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(134, 263);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(74, 25);
+            this.lblAddress.TabIndex = 17;
+            this.lblAddress.Text = "[????]";
             // 
-            // label17
+            // lblEmail
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(134, 214);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 25);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "[????]";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(134, 214);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(74, 25);
+            this.lblEmail.TabIndex = 16;
+            this.lblEmail.Text = "[????]";
             // 
-            // label16
+            // lblNationalNo
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(134, 120);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(74, 25);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "[????]";
+            this.lblNationalNo.AutoSize = true;
+            this.lblNationalNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNationalNo.Location = new System.Drawing.Point(134, 120);
+            this.lblNationalNo.Name = "lblNationalNo";
+            this.lblNationalNo.Size = new System.Drawing.Size(74, 25);
+            this.lblNationalNo.TabIndex = 15;
+            this.lblNationalNo.Text = "[????]";
             // 
-            // label15
+            // lblGendor
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(134, 165);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(74, 25);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "[????]";
+            this.lblGendor.AutoSize = true;
+            this.lblGendor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGendor.Location = new System.Drawing.Point(134, 165);
+            this.lblGendor.Name = "lblGendor";
+            this.lblGendor.Size = new System.Drawing.Size(74, 25);
+            this.lblGendor.TabIndex = 14;
+            this.lblGendor.Text = "[????]";
             // 
-            // label14
+            // lblName
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(134, 77);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(74, 25);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "[????]";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Red;
+            this.lblName.Location = new System.Drawing.Point(134, 77);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(74, 25);
+            this.lblName.TabIndex = 13;
+            this.lblName.Text = "[????]";
             // 
-            // label13
+            // lblPersonID
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(134, 31);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 25);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "[????]";
+            this.lblPersonID.AutoSize = true;
+            this.lblPersonID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonID.Location = new System.Drawing.Point(134, 31);
+            this.lblPersonID.Name = "lblPersonID";
+            this.lblPersonID.Size = new System.Drawing.Size(74, 25);
+            this.lblPersonID.TabIndex = 12;
+            this.lblPersonID.Text = "[????]";
             // 
-            // label12
+            // lblPhone
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(519, 165);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 25);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "[????]";
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhone.Location = new System.Drawing.Point(519, 165);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(74, 25);
+            this.lblPhone.TabIndex = 11;
+            this.lblPhone.Text = "[????]";
             // 
-            // label11
+            // lblCountry
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(519, 214);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 25);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "[????]";
+            this.lblCountry.AutoSize = true;
+            this.lblCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountry.Location = new System.Drawing.Point(519, 214);
+            this.lblCountry.Name = "lblCountry";
+            this.lblCountry.Size = new System.Drawing.Size(74, 25);
+            this.lblCountry.TabIndex = 10;
+            this.lblCountry.Text = "[????]";
             // 
-            // label10
+            // lblDateOfBirth
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(519, 120);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 25);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "[????]";
+            this.lblDateOfBirth.AutoSize = true;
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirth.Location = new System.Drawing.Point(519, 120);
+            this.lblDateOfBirth.Name = "lblDateOfBirth";
+            this.lblDateOfBirth.Size = new System.Drawing.Size(74, 25);
+            this.lblDateOfBirth.TabIndex = 9;
+            this.lblDateOfBirth.Text = "[????]";
             // 
             // label9
             // 
@@ -283,9 +285,9 @@
             // 
             // gbLoginInformation
             // 
-            this.gbLoginInformation.Controls.Add(this.label24);
-            this.gbLoginInformation.Controls.Add(this.label23);
-            this.gbLoginInformation.Controls.Add(this.label22);
+            this.gbLoginInformation.Controls.Add(this.lblIsActive);
+            this.gbLoginInformation.Controls.Add(this.lblUserName);
+            this.gbLoginInformation.Controls.Add(this.lblUserID);
             this.gbLoginInformation.Controls.Add(this.label21);
             this.gbLoginInformation.Controls.Add(this.label20);
             this.gbLoginInformation.Controls.Add(this.label19);
@@ -296,25 +298,35 @@
             this.gbLoginInformation.TabStop = false;
             this.gbLoginInformation.Text = "Login Information";
             // 
-            // label19
+            // lblIsActive
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(32, 41);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(91, 25);
-            this.label19.TabIndex = 19;
-            this.label19.Text = "User ID:";
+            this.lblIsActive.AutoSize = true;
+            this.lblIsActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIsActive.Location = new System.Drawing.Point(664, 41);
+            this.lblIsActive.Name = "lblIsActive";
+            this.lblIsActive.Size = new System.Drawing.Size(48, 25);
+            this.lblIsActive.TabIndex = 23;
+            this.lblIsActive.Text = "???";
             // 
-            // label20
+            // lblUserName
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(310, 41);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(117, 25);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "Username:";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(433, 41);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(48, 25);
+            this.lblUserName.TabIndex = 22;
+            this.lblUserName.Text = "???";
+            // 
+            // lblUserID
+            // 
+            this.lblUserID.AutoSize = true;
+            this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID.Location = new System.Drawing.Point(129, 41);
+            this.lblUserID.Name = "lblUserID";
+            this.lblUserID.Size = new System.Drawing.Size(48, 25);
+            this.lblUserID.TabIndex = 19;
+            this.lblUserID.Text = "???";
             // 
             // label21
             // 
@@ -326,35 +338,36 @@
             this.label21.TabIndex = 21;
             this.label21.Text = "Is Active:";
             // 
-            // label22
+            // label20
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(129, 41);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(48, 25);
-            this.label22.TabIndex = 19;
-            this.label22.Text = "???";
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(310, 41);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(117, 25);
+            this.label20.TabIndex = 20;
+            this.label20.Text = "Username:";
             // 
-            // label23
+            // label19
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(433, 41);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(48, 25);
-            this.label23.TabIndex = 22;
-            this.label23.Text = "???";
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(32, 41);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(91, 25);
+            this.label19.TabIndex = 19;
+            this.label19.Text = "User ID:";
             // 
-            // label24
+            // linkLabel1EditPersonInfo
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(664, 41);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(48, 25);
-            this.label24.TabIndex = 23;
-            this.label24.Text = "???";
+            this.linkLabel1EditPersonInfo.AutoSize = true;
+            this.linkLabel1EditPersonInfo.Location = new System.Drawing.Point(625, 77);
+            this.linkLabel1EditPersonInfo.Name = "linkLabel1EditPersonInfo";
+            this.linkLabel1EditPersonInfo.Size = new System.Drawing.Size(100, 16);
+            this.linkLabel1EditPersonInfo.TabIndex = 21;
+            this.linkLabel1EditPersonInfo.TabStop = true;
+            this.linkLabel1EditPersonInfo.Text = "Edit Person Info";
+            this.linkLabel1EditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1EditPersonInfo_LinkClicked);
             // 
             // ctrlUserCard
             // 
@@ -364,6 +377,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ctrlUserCard";
             this.Size = new System.Drawing.Size(899, 502);
+            this.Load += new System.EventHandler(this.ctrlUserCard_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
@@ -377,15 +391,15 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pbImage;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblNationalNo;
+        private System.Windows.Forms.Label lblGendor;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblPersonID;
+        private System.Windows.Forms.Label lblPhone;
+        private System.Windows.Forms.Label lblCountry;
+        private System.Windows.Forms.Label lblDateOfBirth;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -396,11 +410,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbLoginInformation;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblIsActive;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblUserID;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.LinkLabel linkLabel1EditPersonInfo;
     }
 }

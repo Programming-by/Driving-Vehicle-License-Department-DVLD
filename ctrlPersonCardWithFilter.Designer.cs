@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblNationalNo = new System.Windows.Forms.Label();
+            this.lblGendor = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblPersonID = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.lblCountry = new System.Windows.Forms.Label();
+            this.lblDateOfBirth = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,112 +47,113 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.linkLabel1EditPersonInfo = new System.Windows.Forms.LinkLabel();
             this.pbImage = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtFound = new System.Windows.Forms.TextBox();
+            this.cbFilters = new System.Windows.Forms.ComboBox();
+            this.btnAddNewPerson = new System.Windows.Forms.Button();
+            this.btnSearchPerson = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // label18
+            // lblAddress
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(134, 263);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(74, 25);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "[????]";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(134, 263);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(74, 25);
+            this.lblAddress.TabIndex = 17;
+            this.lblAddress.Text = "[????]";
             // 
-            // label17
+            // lblEmail
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(134, 214);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 25);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "[????]";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(134, 214);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(74, 25);
+            this.lblEmail.TabIndex = 16;
+            this.lblEmail.Text = "[????]";
             // 
-            // label16
+            // lblNationalNo
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(134, 120);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(74, 25);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "[????]";
+            this.lblNationalNo.AutoSize = true;
+            this.lblNationalNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNationalNo.Location = new System.Drawing.Point(134, 120);
+            this.lblNationalNo.Name = "lblNationalNo";
+            this.lblNationalNo.Size = new System.Drawing.Size(74, 25);
+            this.lblNationalNo.TabIndex = 15;
+            this.lblNationalNo.Text = "[????]";
             // 
-            // label15
+            // lblGendor
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(134, 165);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(74, 25);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "[????]";
+            this.lblGendor.AutoSize = true;
+            this.lblGendor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGendor.Location = new System.Drawing.Point(134, 165);
+            this.lblGendor.Name = "lblGendor";
+            this.lblGendor.Size = new System.Drawing.Size(74, 25);
+            this.lblGendor.TabIndex = 14;
+            this.lblGendor.Text = "[????]";
             // 
-            // label14
+            // lblName
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(134, 77);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(74, 25);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "[????]";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Red;
+            this.lblName.Location = new System.Drawing.Point(134, 77);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(74, 25);
+            this.lblName.TabIndex = 13;
+            this.lblName.Text = "[????]";
             // 
-            // label13
+            // lblPersonID
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(134, 31);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 25);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "[????]";
+            this.lblPersonID.AutoSize = true;
+            this.lblPersonID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonID.Location = new System.Drawing.Point(134, 31);
+            this.lblPersonID.Name = "lblPersonID";
+            this.lblPersonID.Size = new System.Drawing.Size(74, 25);
+            this.lblPersonID.TabIndex = 12;
+            this.lblPersonID.Text = "[????]";
             // 
-            // label12
+            // lblPhone
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(519, 165);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 25);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "[????]";
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhone.Location = new System.Drawing.Point(422, 165);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(74, 25);
+            this.lblPhone.TabIndex = 11;
+            this.lblPhone.Text = "[????]";
             // 
-            // label11
+            // lblCountry
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(519, 214);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 25);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "[????]";
+            this.lblCountry.AutoSize = true;
+            this.lblCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountry.Location = new System.Drawing.Point(422, 263);
+            this.lblCountry.Name = "lblCountry";
+            this.lblCountry.Size = new System.Drawing.Size(74, 25);
+            this.lblCountry.TabIndex = 10;
+            this.lblCountry.Text = "[????]";
             // 
-            // label10
+            // lblDateOfBirth
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(519, 120);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 25);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "[????]";
+            this.lblDateOfBirth.AutoSize = true;
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirth.Location = new System.Drawing.Point(422, 120);
+            this.lblDateOfBirth.Name = "lblDateOfBirth";
+            this.lblDateOfBirth.Size = new System.Drawing.Size(74, 25);
+            this.lblDateOfBirth.TabIndex = 9;
+            this.lblDateOfBirth.Text = "[????]";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(362, 214);
+            this.label9.Location = new System.Drawing.Point(297, 263);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 25);
             this.label9.TabIndex = 8;
@@ -162,7 +163,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(362, 165);
+            this.label8.Location = new System.Drawing.Point(285, 165);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 25);
             this.label8.TabIndex = 7;
@@ -172,7 +173,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(362, 119);
+            this.label7.Location = new System.Drawing.Point(285, 120);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 25);
             this.label7.TabIndex = 6;
@@ -240,16 +241,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.linkLabel1EditPersonInfo);
             this.groupBox1.Controls.Add(this.pbImage);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.lblAddress);
+            this.groupBox1.Controls.Add(this.lblEmail);
+            this.groupBox1.Controls.Add(this.lblNationalNo);
+            this.groupBox1.Controls.Add(this.lblGendor);
+            this.groupBox1.Controls.Add(this.lblName);
+            this.groupBox1.Controls.Add(this.lblPersonID);
+            this.groupBox1.Controls.Add(this.lblPhone);
+            this.groupBox1.Controls.Add(this.lblCountry);
+            this.groupBox1.Controls.Add(this.lblDateOfBirth);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -265,6 +267,16 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Person Information";
+            // 
+            // linkLabel1EditPersonInfo
+            // 
+            this.linkLabel1EditPersonInfo.AutoSize = true;
+            this.linkLabel1EditPersonInfo.Location = new System.Drawing.Point(619, 63);
+            this.linkLabel1EditPersonInfo.Name = "linkLabel1EditPersonInfo";
+            this.linkLabel1EditPersonInfo.Size = new System.Drawing.Size(100, 16);
+            this.linkLabel1EditPersonInfo.TabIndex = 24;
+            this.linkLabel1EditPersonInfo.TabStop = true;
+            this.linkLabel1EditPersonInfo.Text = "Edit Person Info";
             // 
             // pbImage
             // 
@@ -288,49 +300,65 @@
             this.label19.TabIndex = 19;
             this.label19.Text = "Find By:";
             // 
-            // textBox1
+            // txtFound
             // 
-            this.textBox1.Location = new System.Drawing.Point(346, 54);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 25);
-            this.textBox1.TabIndex = 20;
+            this.txtFound.Location = new System.Drawing.Point(346, 54);
+            this.txtFound.Multiline = true;
+            this.txtFound.Name = "txtFound";
+            this.txtFound.Size = new System.Drawing.Size(220, 25);
+            this.txtFound.TabIndex = 20;
             // 
-            // comboBox1
+            // cbFilters
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Silver;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(125, 54);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(197, 24);
-            this.comboBox1.TabIndex = 21;
+            this.cbFilters.BackColor = System.Drawing.Color.Silver;
+            this.cbFilters.FormattingEnabled = true;
+            this.cbFilters.Items.AddRange(new object[] {
+            "None",
+            "PersonID",
+            "NationalNo.",
+            "FirstName",
+            "SecondName",
+            "ThirdName",
+            "LastName",
+            "Nationality",
+            "Gendor",
+            "Phone",
+            "Email"});
+            this.cbFilters.Location = new System.Drawing.Point(125, 54);
+            this.cbFilters.Name = "cbFilters";
+            this.cbFilters.Size = new System.Drawing.Size(197, 24);
+            this.cbFilters.TabIndex = 21;
+            this.cbFilters.SelectedIndexChanged += new System.EventHandler(this.cbFilters_SelectedIndexChanged);
             // 
-            // button1
+            // btnAddNewPerson
             // 
-            this.button1.Location = new System.Drawing.Point(585, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 61);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddNewPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddNewPerson.Image = global::DVLDWinForm.Properties.Resources.Add_Person_40;
+            this.btnAddNewPerson.Location = new System.Drawing.Point(680, 27);
+            this.btnAddNewPerson.Name = "btnAddNewPerson";
+            this.btnAddNewPerson.Size = new System.Drawing.Size(75, 61);
+            this.btnAddNewPerson.TabIndex = 23;
+            this.btnAddNewPerson.UseVisualStyleBackColor = true;
+            this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click);
             // 
-            // button2
+            // btnSearchPerson
             // 
-            this.button2.Location = new System.Drawing.Point(679, 29);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 61);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSearchPerson.Image = global::DVLDWinForm.Properties.Resources.SearchPerson;
+            this.btnSearchPerson.Location = new System.Drawing.Point(585, 29);
+            this.btnSearchPerson.Name = "btnSearchPerson";
+            this.btnSearchPerson.Size = new System.Drawing.Size(75, 61);
+            this.btnSearchPerson.TabIndex = 22;
+            this.btnSearchPerson.UseVisualStyleBackColor = true;
+            this.btnSearchPerson.Click += new System.EventHandler(this.btnSearchPerson_Click);
             // 
             // ctrlPersonCardWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnAddNewPerson);
+            this.Controls.Add(this.btnSearchPerson);
+            this.Controls.Add(this.cbFilters);
+            this.Controls.Add(this.txtFound);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.groupBox1);
             this.Name = "ctrlPersonCardWithFilter";
@@ -346,15 +374,15 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pbImage;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblNationalNo;
+        private System.Windows.Forms.Label lblGendor;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblPersonID;
+        private System.Windows.Forms.Label lblPhone;
+        private System.Windows.Forms.Label lblCountry;
+        private System.Windows.Forms.Label lblDateOfBirth;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -366,9 +394,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtFound;
+        private System.Windows.Forms.ComboBox cbFilters;
+        private System.Windows.Forms.Button btnSearchPerson;
+        private System.Windows.Forms.Button btnAddNewPerson;
+        private System.Windows.Forms.LinkLabel linkLabel1EditPersonInfo;
     }
 }
