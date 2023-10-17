@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace DVLDWinForm
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
-        public Form1()
+
+       // public delegate void ClearDataBackHandler(string UserName ,string Password);
+
+      //  public event ClearDataBackHandler DataBack;
+
+       // CheckBox _RememberMe;
+        public FormMain()
         {
             InitializeComponent();
+
         }
 
         private void btnShowAllPeople_Click(object sender, EventArgs e)
@@ -26,6 +33,13 @@ namespace DVLDWinForm
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //if (!_RememberMe.Checked)
+            //{
+            //clsGlobalSettings.CurrentUserInfo.UserName = "";
+            //clsGlobalSettings.CurrentUserInfo.Password = "";
+            //DataBack?.Invoke(clsGlobalSettings.CurrentUserInfo.UserName,clsGlobalSettings.CurrentUserInfo.Password);
+            //}
+
             this.Close();
         }
         private void btnShowAllUsers_Click(object sender, EventArgs e)
@@ -42,8 +56,8 @@ namespace DVLDWinForm
         {
             FormShowUserDetails frm = new FormShowUserDetails();
 
-            ctrlUserCard.LoadUserInfo(clsGlobalSettings.CurrentUserInfo.UserID);
-            ctrlUserCard.LoadPersonInfo(clsGlobalSettings.CurrentUserInfo.PersonData.PersonID);
+            ctrlUserCard.LoadUserInfo(clsGlobal.CurrentUserInfo.UserID);
+            ctrlUserCard.LoadPersonInfo(clsGlobal.CurrentUserInfo.PersonData.PersonID);
 
             
             //  ctrlUserCard.GetAllPeople();
@@ -57,8 +71,8 @@ namespace DVLDWinForm
             FormChangePassword frm = new FormChangePassword();
 
 
-            ctrlUserCard.LoadUserInfo(clsGlobalSettings.CurrentUserInfo.UserID);
-            ctrlUserCard.LoadPersonInfo(clsGlobalSettings.CurrentUserInfo.PersonID);
+            ctrlUserCard.LoadUserInfo(clsGlobal.CurrentUserInfo.UserID);
+            ctrlUserCard.LoadPersonInfo(clsGlobal.CurrentUserInfo.PersonID);
 
 
             //  ctrlUserCard.GetAllPeople(dgvAllPeople);
@@ -81,6 +95,20 @@ namespace DVLDWinForm
             frm.ShowDialog();
 
             
+        }
+
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormNewDrivingLicenseApplication frm = new FormNewDrivingLicenseApplication();
+
+            frm.ShowDialog();
+        }
+
+        private void localDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLocalDrivingLicenseApplications frm = new FormLocalDrivingLicenseApplications();
+
+            frm.ShowDialog();
         }
     }
 }

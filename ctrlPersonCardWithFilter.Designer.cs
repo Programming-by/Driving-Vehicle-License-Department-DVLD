@@ -50,10 +50,10 @@
             this.linkLabel1EditPersonInfo = new System.Windows.Forms.LinkLabel();
             this.pbImage = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.txtFound = new System.Windows.Forms.TextBox();
             this.cbFilters = new System.Windows.Forms.ComboBox();
             this.btnAddNewPerson = new System.Windows.Forms.Button();
             this.btnSearchPerson = new System.Windows.Forms.Button();
+            this.txtFound = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
@@ -277,6 +277,7 @@
             this.linkLabel1EditPersonInfo.TabIndex = 24;
             this.linkLabel1EditPersonInfo.TabStop = true;
             this.linkLabel1EditPersonInfo.Text = "Edit Person Info";
+            this.linkLabel1EditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1EditPersonInfo_LinkClicked);
             // 
             // pbImage
             // 
@@ -300,30 +301,13 @@
             this.label19.TabIndex = 19;
             this.label19.Text = "Find By:";
             // 
-            // txtFound
-            // 
-            this.txtFound.Location = new System.Drawing.Point(346, 54);
-            this.txtFound.Multiline = true;
-            this.txtFound.Name = "txtFound";
-            this.txtFound.Size = new System.Drawing.Size(220, 25);
-            this.txtFound.TabIndex = 20;
-            // 
             // cbFilters
             // 
             this.cbFilters.BackColor = System.Drawing.Color.Silver;
             this.cbFilters.FormattingEnabled = true;
             this.cbFilters.Items.AddRange(new object[] {
-            "None",
-            "PersonID",
             "NationalNo.",
-            "FirstName",
-            "SecondName",
-            "ThirdName",
-            "LastName",
-            "Nationality",
-            "Gendor",
-            "Phone",
-            "Email"});
+            "PersonID"});
             this.cbFilters.Location = new System.Drawing.Point(125, 54);
             this.cbFilters.Name = "cbFilters";
             this.cbFilters.Size = new System.Drawing.Size(197, 24);
@@ -351,18 +335,26 @@
             this.btnSearchPerson.UseVisualStyleBackColor = true;
             this.btnSearchPerson.Click += new System.EventHandler(this.btnSearchPerson_Click);
             // 
+            // txtFound
+            // 
+            this.txtFound.Location = new System.Drawing.Point(344, 56);
+            this.txtFound.Name = "txtFound";
+            this.txtFound.Size = new System.Drawing.Size(184, 22);
+            this.txtFound.TabIndex = 24;
+            // 
             // ctrlPersonCardWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtFound);
             this.Controls.Add(this.btnAddNewPerson);
             this.Controls.Add(this.btnSearchPerson);
             this.Controls.Add(this.cbFilters);
-            this.Controls.Add(this.txtFound);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.groupBox1);
             this.Name = "ctrlPersonCardWithFilter";
             this.Size = new System.Drawing.Size(890, 454);
+            this.Load += new System.EventHandler(this.ctrlPersonCardWithFilter_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
@@ -394,10 +386,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox txtFound;
         private System.Windows.Forms.ComboBox cbFilters;
         private System.Windows.Forms.Button btnSearchPerson;
         private System.Windows.Forms.Button btnAddNewPerson;
         private System.Windows.Forms.LinkLabel linkLabel1EditPersonInfo;
+        private System.Windows.Forms.MaskedTextBox txtFound;
     }
 }

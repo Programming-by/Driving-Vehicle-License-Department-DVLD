@@ -4,7 +4,6 @@ C:\Users\User\Source\Repos\DVLDWinForm\bin\Debug\DVLDWinForm.pdb
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.AssemblyReference.cache
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.SuggestedBindingRedirects.cache
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.ctrlPersonCard.resources
-C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Form1.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Properties.Resources.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.GenerateResource.cache
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.CoreCompileInputs.cache
@@ -29,3 +28,6 @@ C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormManageApplicati
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormUpdateApplicationType.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormManageTestTypes.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormUpdateTestType.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormNewDrivingLicenseApplication.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormLocalDrivingLicenseApplications.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormMain.resources

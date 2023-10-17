@@ -28,7 +28,7 @@ namespace DVLDWinForm
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _User = clsUserData.Find(clsGlobalSettings.CurrentUserInfo.UserName, (clsGlobalSettings.CurrentUserInfo.Password));
+            _User = clsUserData.Find(clsGlobal.CurrentUserInfo.UserName, (clsGlobal.CurrentUserInfo.Password));
 
 
             if (_User == null)
@@ -41,7 +41,7 @@ namespace DVLDWinForm
 
             if (_User.Save())
             {
-                clsGlobalSettings.CurrentUserInfo.Password = _User.Password;
+                clsGlobal.CurrentUserInfo.Password = _User.Password;
                 MessageBox.Show("Password Change Successfully");
             }
            
@@ -105,7 +105,7 @@ namespace DVLDWinForm
 
         private void CheckIfCurrentPasswordNotEqualUserPassword(CancelEventArgs e)
         {
-            if (txtCurrentPassword.Text != clsGlobalSettings.CurrentUserInfo.Password)
+            if (txtCurrentPassword.Text != clsGlobal.CurrentUserInfo.Password)
             {
                 e.Cancel = true;
                 txtCurrentPassword.Focus();

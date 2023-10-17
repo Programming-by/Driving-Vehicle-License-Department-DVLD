@@ -41,11 +41,9 @@ namespace DVLDWinForm
         {
             AllPeople = dgvAllPeople;
         }
-
         private void btnNext_Click(object sender, EventArgs e)
         {
             ctrlPersonCardWithFilter ctrlPersonCardWithFilter = new ctrlPersonCardWithFilter();
-
             if (ctrlPersonCardWithFilter.GetFoundText() == "if its a user")
             {
             MessageBox.Show("Selected Person already has a user,Choose another one.","Select another Person",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -59,7 +57,6 @@ namespace DVLDWinForm
 
 
         }
-
         private void txtUserName_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txtUserName.Text))
@@ -92,7 +89,6 @@ namespace DVLDWinForm
 
 
         }
-
         private void CheckIfPasswordNotEqualConfirmPassword(CancelEventArgs e)
         {
             if (txtPassword.Text != txtConfirmPassword.Text)
@@ -112,8 +108,6 @@ namespace DVLDWinForm
             }
 
         }
-
-
         private void txtConfirmPassword_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txtConfirmPassword.Text))
@@ -132,7 +126,6 @@ namespace DVLDWinForm
             CheckIfPasswordNotEqualConfirmPassword(e);
 
         }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
 

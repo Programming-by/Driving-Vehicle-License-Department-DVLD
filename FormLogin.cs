@@ -7,15 +7,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using System.Net;
 
 namespace DVLDWinForm
 {
-    //save txtUserName and txtPassword to txt file
     //on form load Remember Data
     public partial class FormLogin : Form
     {
-        clsUserData _User;
 
         public FormLogin()
         {
@@ -25,43 +25,59 @@ namespace DVLDWinForm
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            _User = clsUserData.Find(txtUserName.Text, txtPassword.Text);
+            clsUserData User = clsUserData.Find(txtUserName.Text, txtPassword.Text);
             
 
-            if (_User == null )
+            if (User != null)
             {
-                MessageBox.Show("Invalid UserName/Password", "Wrong Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                if (chkRememberMe.Checked)
+                {
+                    clsGlobal.RememberUserNameAndPassword(txtUserName.Text.Trim(), txtPassword.Text.Trim());
+                } else
+                {
+                    clsGlobal.RememberUserNameAndPassword("", "");
+                }
 
-            if (!_User.IsActive)
-            {
-                MessageBox.Show("Your Account is Deactivated, Please Contact your Admin!", "Deactivated", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                if (!User.IsActive)
+                {
+                    txtUserName.Focus();
+                    MessageBox.Show("Your account is not Active, Contact Admin.", "In Active Account", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-            if ( _User.UserName == txtUserName.Text && _User.Password == txtPassword.Text && _User.IsActive )
-            {
-                clsGlobalSettings.CurrentUserInfo = _User;
-                 clsGlobalSettings.CurrentUserInfo.PersonData.PersonID = _User.PersonID;
-                Form1 frm = new Form1();
+
+                clsGlobal.CurrentUserInfo = User;
+                this.Hide();
+                FormMain frm = new FormMain();
                 frm.ShowDialog();
+            } else
+            {
+                txtUserName.Focus();
+                MessageBox.Show("Invalid UserName/Password", "Wrong Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
+        }
 
-
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-          
-        }
+            string UserName = "", Password = "";
 
-        private void chkRememberMe_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkRememberMe.Checked)
+            if (clsGlobal.GetStoredCredential(ref UserName,ref Password))
             {
-                
+                txtUserName.Text = UserName;
+                txtPassword.Text = Password;
+                chkRememberMe.Checked = true;
+            } else
+            {
+                chkRememberMe.Checked = false;
             }
+
+
         }
     }
 }
