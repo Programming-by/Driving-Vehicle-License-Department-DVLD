@@ -54,9 +54,8 @@ namespace DVLDWinForm
 
         private void linkLabel1EditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormAddEditPerson frm = new FormAddEditPerson(_PersonID);
+            FormAddUpdatePerson frm = new FormAddUpdatePerson(_PersonID);
 
-            frm.GetAllPeople(AllPeople);
 
             frm.ShowDialog();
         }
@@ -76,7 +75,7 @@ namespace DVLDWinForm
               Country = clsCountryData.Find(_Person.NationalityCountryID);
 
             lblPersonID.Text = _PersonID.ToString();
-            lblName.Text = _Person.FullName();
+            lblName.Text = _Person.FullName;
             lblNationalNo.Text = _Person.NationalNo;
             if (_Person.Gendor == 0)
             {

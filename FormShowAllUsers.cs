@@ -46,7 +46,6 @@ namespace DVLDWinForm
         private void btnAddNewUser_Click(object sender, EventArgs e)
         {
             FormAddEditUser frm = new FormAddEditUser(-1);
-            ctrlPersonCardWithFilter.GetAllPeople(dgvAllPeople);
             frm.ShowDialog();
         }
 
@@ -173,8 +172,7 @@ namespace DVLDWinForm
 
             FormAddEditUser frm = new FormAddEditUser((int)dgvAllPeople.CurrentRow.Cells[1].Value);
 
-            ctrlPersonCard.LoadPersonInfo((int)dgvAllPeople.CurrentRow.Cells[1].Value);
-            ctrlPersonCard.GetAllPeople(dgvAllPeople);
+          //  ctrlPersonCard.LoadPersonInfo((int)dgvAllPeople.CurrentRow.Cells[1].Value);
              
             frm.ShowDialog();
 

@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLDClasses;
+
 
 namespace DVLDWinForm
 {
@@ -45,15 +47,15 @@ namespace DVLDWinForm
             lblDate.Text = DateTime.Now.ToShortDateString().ToString();
             _FillLicenseClassesInComboBox();
             lblApplicationFees.Text = "15";
-            lblCreatedBy.Text = clsGlobal.CurrentUserInfo.UserName;
+            lblCreatedBy.Text = clsGlobal.CurrentUser.UserName;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             _Application = new clsLocalDrivingLicenseApplications();
             _Application.ClassName = cbLicenseClasses.Text;
-            _Application.NationalNo = clsGlobal.CurrentUserInfo.PersonData.NationalNo;
-            _Application.FullName = clsGlobal.CurrentUserInfo.PersonData.FullName();
+            _Application.NationalNo = clsGlobal.CurrentUser.PersonData.NationalNo;
+            _Application.FullName = clsGlobal.CurrentUser.PersonData.FullName;
             _Application.ApplicationDate = Convert.ToDateTime(lblDate.Text);
             _Application.PassedTestCount = 0;
             _Application.Status = "New";

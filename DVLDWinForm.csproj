@@ -46,17 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsGlobal.cs" />
-    <Compile Include="ctrlPersonCard.cs">
+    <Compile Include="People\FormFindPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\FormFindPerson.Designer.cs">
+      <DependentUpon>FormFindPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global Classes\clsFormat.cs" />
+    <Compile Include="Global Classes\util.cs" />
+    <Compile Include="Global Classes\clsValidation.cs" />
+    <Compile Include="Global Classes\ClsGlobal.cs" />
+    <Compile Include="People\Controls\ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlPersonCard.Designer.cs">
+    <Compile Include="People\Controls\ctrlPersonCard.Designer.cs">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlPersonCardWithFilter.cs">
+    <Compile Include="People\Controls\ctrlPersonCardWithFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlPersonCardWithFilter.Designer.cs">
+    <Compile Include="People\Controls\ctrlPersonCardWithFilter.Designer.cs">
       <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="ctrlUserCard.cs">
@@ -71,11 +80,11 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddEditPerson.cs">
+    <Compile Include="People\FormAddUpdatePerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddEditPerson.Designer.cs">
-      <DependentUpon>FormAddEditPerson.cs</DependentUpon>
+    <Compile Include="People\FormAddUpdatePerson.Designer.cs">
+      <DependentUpon>FormAddUpdatePerson.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAddEditUser.cs">
       <SubType>Form</SubType>
@@ -95,10 +104,10 @@
     <Compile Include="FormLocalDrivingLicenseApplications.Designer.cs">
       <DependentUpon>FormLocalDrivingLicenseApplications.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="Login\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include="Login\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormManageApplicationTypes.cs">
@@ -119,10 +128,10 @@
     <Compile Include="FormNewDrivingLicenseApplication.Designer.cs">
       <DependentUpon>FormNewDrivingLicenseApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormShowAllPeople.cs">
+    <Compile Include="People\FormShowAllPeople.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormShowAllPeople.Designer.cs">
+    <Compile Include="People\FormShowAllPeople.Designer.cs">
       <DependentUpon>FormShowAllPeople.cs</DependentUpon>
     </Compile>
     <Compile Include="FormShowAllUsers.cs">
@@ -131,10 +140,10 @@
     <Compile Include="FormShowAllUsers.Designer.cs">
       <DependentUpon>FormShowAllUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormShowPersonDetails.cs">
+    <Compile Include="People\FormShowPersonDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormShowPersonDetails.Designer.cs">
+    <Compile Include="People\FormShowPersonDetails.Designer.cs">
       <DependentUpon>FormShowPersonDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="FormShowUserDetails.cs">
@@ -157,10 +166,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ctrlPersonCard.resx">
+    <EmbeddedResource Include="People\FormFindPerson.resx">
+      <DependentUpon>FormFindPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Controls\ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlPersonCardWithFilter.resx">
+    <EmbeddedResource Include="People\Controls\ctrlPersonCardWithFilter.resx">
       <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlUserCard.resx">
@@ -169,8 +181,8 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddEditPerson.resx">
-      <DependentUpon>FormAddEditPerson.cs</DependentUpon>
+    <EmbeddedResource Include="People\FormAddUpdatePerson.resx">
+      <DependentUpon>FormAddUpdatePerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddEditUser.resx">
       <DependentUpon>FormAddEditUser.cs</DependentUpon>
@@ -181,7 +193,7 @@
     <EmbeddedResource Include="FormLocalDrivingLicenseApplications.resx">
       <DependentUpon>FormLocalDrivingLicenseApplications.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
+    <EmbeddedResource Include="Login\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormManageApplicationTypes.resx">
@@ -193,13 +205,13 @@
     <EmbeddedResource Include="FormNewDrivingLicenseApplication.resx">
       <DependentUpon>FormNewDrivingLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormShowAllPeople.resx">
+    <EmbeddedResource Include="People\FormShowAllPeople.resx">
       <DependentUpon>FormShowAllPeople.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormShowAllUsers.resx">
       <DependentUpon>FormShowAllUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormShowPersonDetails.resx">
+    <EmbeddedResource Include="People\FormShowPersonDetails.resx">
       <DependentUpon>FormShowPersonDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormShowUserDetails.resx">
@@ -272,6 +284,93 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Add Person 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applications 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drivers 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Driver License 48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applications 641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applications.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test Type 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applications1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage Applications 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application Types 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out 32 -2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out 32 -21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonDetails 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\International 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Driver License 481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Release Detained License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Driving License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Renew Driving License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Damaged Driving License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detained Driving License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Retake Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Local 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female 512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -43,13 +43,7 @@ namespace DVLDWinForm
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            ctrlPersonCardWithFilter ctrlPersonCardWithFilter = new ctrlPersonCardWithFilter();
-            if (ctrlPersonCardWithFilter.GetFoundText() == "if its a user")
-            {
-            MessageBox.Show("Selected Person already has a user,Choose another one.","Select another Person",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                return;
-            }
-
+           
 
 
             tabControl1.SelectedIndex = (tabControl1.SelectedIndex + 1 < tabControl1.TabCount) ?
@@ -131,7 +125,7 @@ namespace DVLDWinForm
 
             ctrlPersonCardWithFilter ctrlPersonCardWithFilter = new ctrlPersonCardWithFilter();
 
-            _User = clsUserData.Find(ctrlPersonCardWithFilter.GetPersonID());
+            _User = clsUserData.Find(ctrlPersonCardWithFilter.PersonID);
 
             if (_User == null)
             {

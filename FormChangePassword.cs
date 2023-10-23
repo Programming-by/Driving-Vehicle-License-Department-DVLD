@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLDClasses;
 
 namespace DVLDWinForm
 {
@@ -28,7 +29,7 @@ namespace DVLDWinForm
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _User = clsUserData.Find(clsGlobal.CurrentUserInfo.UserName, (clsGlobal.CurrentUserInfo.Password));
+            _User = clsUserData.Find(clsGlobal.CurrentUser.UserName, (clsGlobal.CurrentUser.Password));
 
 
             if (_User == null)
@@ -41,7 +42,7 @@ namespace DVLDWinForm
 
             if (_User.Save())
             {
-                clsGlobal.CurrentUserInfo.Password = _User.Password;
+                clsGlobal.CurrentUser.Password = _User.Password;
                 MessageBox.Show("Password Change Successfully");
             }
            
@@ -105,7 +106,7 @@ namespace DVLDWinForm
 
         private void CheckIfCurrentPasswordNotEqualUserPassword(CancelEventArgs e)
         {
-            if (txtCurrentPassword.Text != clsGlobal.CurrentUserInfo.Password)
+            if (txtCurrentPassword.Text != clsGlobal.CurrentUser.Password)
             {
                 e.Cancel = true;
                 txtCurrentPassword.Focus();

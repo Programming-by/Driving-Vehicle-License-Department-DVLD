@@ -17,7 +17,6 @@ C:\Users\User\Source\Repos\DVLDWinForm\bin\Debug\DVLDDataAccessLayer.dll
 C:\Users\User\Source\Repos\DVLDWinForm\bin\Debug\DVLDBusinessLayer.pdb
 C:\Users\User\Source\Repos\DVLDWinForm\bin\Debug\DVLDDataAccessLayer.pdb
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.CopyComplete
-C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormAddEditPerson.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormShowPersonDetails.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormLogin.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormShowAllUsers.resources
@@ -31,3 +30,5 @@ C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormUpdateTestType.
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormNewDrivingLicenseApplication.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormLocalDrivingLicenseApplications.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormMain.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormAddUpdatePerson.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormFindPerson.resources

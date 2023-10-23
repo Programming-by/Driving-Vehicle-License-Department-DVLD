@@ -7,21 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLDClasses;
 
 namespace DVLDWinForm
 {
     public partial class FormMain : Form
     {
-
-       // public delegate void ClearDataBackHandler(string UserName ,string Password);
-
-      //  public event ClearDataBackHandler DataBack;
-
-       // CheckBox _RememberMe;
-        public FormMain()
+        Form _frm;
+        public FormMain(Form frm)
         {
             InitializeComponent();
-
+            _frm = frm;
         }
 
         private void btnShowAllPeople_Click(object sender, EventArgs e)
@@ -56,8 +52,8 @@ namespace DVLDWinForm
         {
             FormShowUserDetails frm = new FormShowUserDetails();
 
-            ctrlUserCard.LoadUserInfo(clsGlobal.CurrentUserInfo.UserID);
-            ctrlUserCard.LoadPersonInfo(clsGlobal.CurrentUserInfo.PersonData.PersonID);
+            ctrlUserCard.LoadUserInfo(clsGlobal.CurrentUser.UserID);
+            ctrlUserCard.LoadPersonInfo(clsGlobal.CurrentUser.PersonData.PersonID);
 
             
             //  ctrlUserCard.GetAllPeople();
@@ -71,8 +67,8 @@ namespace DVLDWinForm
             FormChangePassword frm = new FormChangePassword();
 
 
-            ctrlUserCard.LoadUserInfo(clsGlobal.CurrentUserInfo.UserID);
-            ctrlUserCard.LoadPersonInfo(clsGlobal.CurrentUserInfo.PersonID);
+            ctrlUserCard.LoadUserInfo(clsGlobal.CurrentUser.UserID);
+            ctrlUserCard.LoadPersonInfo(clsGlobal.CurrentUser.PersonID);
 
 
             //  ctrlUserCard.GetAllPeople(dgvAllPeople);
@@ -109,6 +105,21 @@ namespace DVLDWinForm
             FormLocalDrivingLicenseApplications frm = new FormLocalDrivingLicenseApplications();
 
             frm.ShowDialog();
+        }
+
+        private void servicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void msMainMenue_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
