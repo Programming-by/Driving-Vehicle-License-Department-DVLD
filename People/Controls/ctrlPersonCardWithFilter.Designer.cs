@@ -35,8 +35,8 @@
             this.btnSearchPerson = new System.Windows.Forms.Button();
             this.txtFilterValue = new System.Windows.Forms.MaskedTextBox();
             this.gbFilters = new System.Windows.Forms.GroupBox();
-            this.ctrlPersonCard1 = new DVLDWinForm.ctrlPersonCard();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ctrlPersonCard1 = new DVLDWinForm.ctrlPersonCard();
             this.gbFilters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -103,21 +103,22 @@
             this.gbFilters.Controls.Add(this.cbFilterBy);
             this.gbFilters.Location = new System.Drawing.Point(18, 3);
             this.gbFilters.Name = "gbFilters";
-            this.gbFilters.Size = new System.Drawing.Size(844, 100);
+            this.gbFilters.Size = new System.Drawing.Size(864, 100);
             this.gbFilters.TabIndex = 25;
             this.gbFilters.TabStop = false;
             this.gbFilters.Text = "Filter";
             // 
-            // ctrlPersonCard1
-            // 
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(3, 156);
-            this.ctrlPersonCard1.Name = "ctrlPersonCard1";
-            this.ctrlPersonCard1.Size = new System.Drawing.Size(898, 333);
-            this.ctrlPersonCard1.TabIndex = 27;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // ctrlPersonCard1
+            // 
+            this.ctrlPersonCard1.Location = new System.Drawing.Point(18, 131);
+            this.ctrlPersonCard1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ctrlPersonCard1.Name = "ctrlPersonCard1";
+            this.ctrlPersonCard1.Size = new System.Drawing.Size(924, 380);
+            this.ctrlPersonCard1.TabIndex = 26;
             // 
             // ctrlPersonCardWithFilter
             // 
@@ -142,7 +143,7 @@
         private System.Windows.Forms.Button btnAddNewPerson;
         private System.Windows.Forms.MaskedTextBox txtFilterValue;
         private System.Windows.Forms.GroupBox gbFilters;
-        private ctrlPersonCard ctrlPersonCard1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private ctrlPersonCard ctrlPersonCard1;
     }
 }

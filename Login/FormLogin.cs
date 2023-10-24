@@ -14,7 +14,6 @@ using DVLDClasses;
 
 namespace DVLDWinForm
 {
-    //on form load Remember Data
     public partial class FormLogin : Form
     {
 
@@ -26,7 +25,7 @@ namespace DVLDWinForm
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            clsUserData User = clsUserData.Find(txtUserName.Text, txtPassword.Text);
+            clsUserData User = clsUserData.FindByUserNameAndPassword(txtUserName.Text, txtPassword.Text);
             
 
             if (User != null)

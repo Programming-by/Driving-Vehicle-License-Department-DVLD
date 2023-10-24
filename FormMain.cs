@@ -13,69 +13,43 @@ namespace DVLDWinForm
 {
     public partial class FormMain : Form
     {
-        Form _frm;
+        Form _frmLogin;
         public FormMain(Form frm)
         {
             InitializeComponent();
-            _frm = frm;
+            _frmLogin = frm;
         }
 
-        private void btnShowAllPeople_Click(object sender, EventArgs e)
+    
+        private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormShowAllPeople frm = new FormShowAllPeople();
 
             frm.ShowDialog();
         }
-
-        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //if (!_RememberMe.Checked)
-            //{
-            //clsGlobalSettings.CurrentUserInfo.UserName = "";
-            //clsGlobalSettings.CurrentUserInfo.Password = "";
-            //DataBack?.Invoke(clsGlobalSettings.CurrentUserInfo.UserName,clsGlobalSettings.CurrentUserInfo.Password);
-            //}
-
-            this.Close();
-        }
-        private void btnShowAllUsers_Click(object sender, EventArgs e)
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormShowAllUsers frm = new FormShowAllUsers();
 
-
             frm.ShowDialog();
         }
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsGlobal.CurrentUser = null;
+            _frmLogin.Show();
+            this.Close();
 
+        }
        
-
         private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormShowUserDetails frm = new FormShowUserDetails();
-
-            ctrlUserCard.LoadUserInfo(clsGlobal.CurrentUser.UserID);
-            ctrlUserCard.LoadPersonInfo(clsGlobal.CurrentUser.PersonData.PersonID);
-
-            
-            //  ctrlUserCard.GetAllPeople();
+            FormShowUserDetails frm = new FormShowUserDetails(clsGlobal.CurrentUser.UserID);
 
             frm.ShowDialog();
 
         }
 
-        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormChangePassword frm = new FormChangePassword();
-
-
-            ctrlUserCard.LoadUserInfo(clsGlobal.CurrentUser.UserID);
-            ctrlUserCard.LoadPersonInfo(clsGlobal.CurrentUser.PersonID);
-
-
-            //  ctrlUserCard.GetAllPeople(dgvAllPeople);
-
-            frm.ShowDialog();
-
-        }
+      
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -112,14 +86,12 @@ namespace DVLDWinForm
 
         }
 
-        private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FormChangePassword frm = new FormChangePassword(clsGlobal.CurrentUser.UserID);
 
-        }
-
-        private void msMainMenue_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
+            frm.ShowDialog();
         }
     }
 }

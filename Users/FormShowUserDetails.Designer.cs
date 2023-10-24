@@ -70,6 +70,7 @@
             this.Controls.Add(this.btnClose);
             this.Name = "FormShowUserDetails";
             this.Text = "FormShowUserDetails";
+            this.Load += new System.EventHandler(this.FormShowUserDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

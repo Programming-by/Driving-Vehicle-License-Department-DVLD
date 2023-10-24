@@ -68,10 +68,10 @@
     <Compile Include="People\Controls\ctrlPersonCardWithFilter.Designer.cs">
       <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlUserCard.cs">
+    <Compile Include="Users\Controls\ctrlUserCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlUserCard.Designer.cs">
+    <Compile Include="Users\Controls\ctrlUserCard.Designer.cs">
       <DependentUpon>ctrlUserCard.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
@@ -86,10 +86,10 @@
     <Compile Include="People\FormAddUpdatePerson.Designer.cs">
       <DependentUpon>FormAddUpdatePerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddEditUser.cs">
+    <Compile Include="Users\FormAddEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddEditUser.Designer.cs">
+    <Compile Include="Users\FormAddEditUser.Designer.cs">
       <DependentUpon>FormAddEditUser.cs</DependentUpon>
     </Compile>
     <Compile Include="FormChangePassword.cs">
@@ -134,10 +134,10 @@
     <Compile Include="People\FormShowAllPeople.Designer.cs">
       <DependentUpon>FormShowAllPeople.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormShowAllUsers.cs">
+    <Compile Include="Users\FormShowAllUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormShowAllUsers.Designer.cs">
+    <Compile Include="Users\FormShowAllUsers.Designer.cs">
       <DependentUpon>FormShowAllUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="People\FormShowPersonDetails.cs">
@@ -146,10 +146,10 @@
     <Compile Include="People\FormShowPersonDetails.Designer.cs">
       <DependentUpon>FormShowPersonDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormShowUserDetails.cs">
+    <Compile Include="Users\FormShowUserDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormShowUserDetails.Designer.cs">
+    <Compile Include="Users\FormShowUserDetails.Designer.cs">
       <DependentUpon>FormShowUserDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUpdateApplicationType.cs">
@@ -175,7 +175,7 @@
     <EmbeddedResource Include="People\Controls\ctrlPersonCardWithFilter.resx">
       <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlUserCard.resx">
+    <EmbeddedResource Include="Users\Controls\ctrlUserCard.resx">
       <DependentUpon>ctrlUserCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
@@ -184,7 +184,7 @@
     <EmbeddedResource Include="People\FormAddUpdatePerson.resx">
       <DependentUpon>FormAddUpdatePerson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddEditUser.resx">
+    <EmbeddedResource Include="Users\FormAddEditUser.resx">
       <DependentUpon>FormAddEditUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChangePassword.resx">
@@ -208,13 +208,13 @@
     <EmbeddedResource Include="People\FormShowAllPeople.resx">
       <DependentUpon>FormShowAllPeople.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormShowAllUsers.resx">
+    <EmbeddedResource Include="Users\FormShowAllUsers.resx">
       <DependentUpon>FormShowAllUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\FormShowPersonDetails.resx">
       <DependentUpon>FormShowPersonDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormShowUserDetails.resx">
+    <EmbeddedResource Include="Users\FormShowUserDetails.resx">
       <DependentUpon>FormShowUserDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateApplicationType.resx">

@@ -17,9 +17,11 @@ namespace DVLDWinForm
     public partial class FormChangePassword : Form
     {
         clsUserData _User;
-        public FormChangePassword()
+        int _UserID;
+        public FormChangePassword(int UserID)
         {
             InitializeComponent();
+            _UserID = UserID;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -27,86 +29,47 @@ namespace DVLDWinForm
             this.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void _ResetDefaultValues()
         {
-            _User = clsUserData.Find(clsGlobal.CurrentUser.UserName, (clsGlobal.CurrentUser.Password));
+            txtCurrentPassword.Text = "";
+            txtNewPassword.Text = "";
+            txtConfirmPassword.Text = "";
+            txtCurrentPassword.Focus();
+        }
+        private void FormChangePassword_Load(object sender, EventArgs e)
+        {
+            _ResetDefaultValues();
 
+            _User = clsUserData.FindByUserID(_UserID);
 
             if (_User == null)
             {
-                MessageBox.Show("error");
+                MessageBox.Show("Could not Find User with id = " + _UserID,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+
                 return;
+
             }
 
-            _User.Password = txtNewPassword.Text;
+            ctrlUserCard1.LoadUserInfo(_UserID);
 
-            if (_User.Save())
-            {
-                clsGlobal.CurrentUser.Password = _User.Password;
-                MessageBox.Show("Password Change Successfully");
-            }
-           
         }
-
         private void txtCurrentPassword_Validating(object sender, CancelEventArgs e)
         {
 
             if (string.IsNullOrEmpty(txtCurrentPassword.Text))
             {
                 e.Cancel = true;
-                txtCurrentPassword.Focus();
                 errorProvider1.SetError(txtCurrentPassword, "Current Password cannot be blank!");
                 return;
             }
             else
             {
-                e.Cancel = false;
                 errorProvider1.SetError(txtCurrentPassword, "");
             }
 
-            CheckIfCurrentPasswordNotEqualUserPassword(e);
-
-  
-        }
-
-        private void txtNewPassword_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtNewPassword.Text))
-            {
-                e.Cancel = true;
-                txtNewPassword.Focus();
-                errorProvider1.SetError(txtNewPassword, "Password cannot be blank!");
-                return;
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider1.SetError(txtNewPassword, "");
-            }
-        }
-        private void txtConfirmPassword_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtConfirmPassword.Text))
-            {
-                e.Cancel = true;
-                txtConfirmPassword.Focus();
-                errorProvider1.SetError(txtConfirmPassword, "Confirm Password cannot be blank!");
-                return;
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider1.SetError(txtConfirmPassword, "");
-            }
-
-            CheckIfNewPasswordNotEqualConfirmPassword(e);
-         
-
-        }
-
-        private void CheckIfCurrentPasswordNotEqualUserPassword(CancelEventArgs e)
-        {
-            if (txtCurrentPassword.Text != clsGlobal.CurrentUser.Password)
+            if (txtCurrentPassword.Text.Trim() != _User.Password)
             {
                 e.Cancel = true;
                 txtCurrentPassword.Focus();
@@ -114,48 +77,56 @@ namespace DVLDWinForm
             }
             else
             {
-                e.Cancel = false;
                 errorProvider1.SetError(txtCurrentPassword, "");
             }
 
         }
-
-        private void CheckIfNewPasswordNotEqualConfirmPassword(CancelEventArgs e)
+        private void txtNewPassword_Validating(object sender, CancelEventArgs e)
         {
+            if (string.IsNullOrEmpty(txtNewPassword.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtNewPassword, "Password cannot be blank!");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtNewPassword, "");
+            }
+        }
+        private void txtConfirmPassword_Validating(object sender, CancelEventArgs e)
+        {
+          
             if (txtNewPassword.Text != txtConfirmPassword.Text)
             {
                 e.Cancel = true;
-                txtNewPassword.Focus();
-                txtConfirmPassword.Focus();
                 errorProvider1.SetError(txtConfirmPassword, "Password Confirmation doesn't match New Password!");
-
-
             }
             else
             {
-                e.Cancel = false;
-                errorProvider1.SetError(txtNewPassword, "");
                 errorProvider1.SetError(txtConfirmPassword, "");
-
             }
-           // CheckIfNewPasswordIsDifferentThanCurrentPassword(e);
-        }
 
-        private void CheckIfNewPasswordIsDifferentThanCurrentPassword(CancelEventArgs e)
+        }
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtNewPassword.Text == txtCurrentPassword.Text)
+
+            if (!this.ValidateChildren())
             {
-                e.Cancel = true;
-                txtNewPassword.Focus();
-                errorProvider1.SetError(txtNewPassword, "New Password can't't be the same as Current Password!");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider1.SetError(txtNewPassword, "");
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro",
+                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
+            _User.Password = txtNewPassword.Text;
+
+            if (_User.Save())
+            {
+                MessageBox.Show("Password Changed Successfully.",
+                "Saved.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _ResetDefaultValues();
+            }
+           
         }
-   
     }
 }

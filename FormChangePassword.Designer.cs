@@ -149,6 +149,7 @@
             this.Controls.Add(this.ctrlUserCard1);
             this.Name = "FormChangePassword";
             this.Text = "FormChangePassword";
+            this.Load += new System.EventHandler(this.FormChangePassword_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

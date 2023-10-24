@@ -31,7 +31,8 @@ namespace DVLDWinForm
         }
       public void LoadPersonInfo(int PersonID)
         {
-            _Person = clsPersonData.Find(_PersonID);
+
+            _Person = clsPersonData.Find(PersonID);
             if (_Person == null)
             {
                 ResetPersonInfo();
@@ -82,9 +83,10 @@ namespace DVLDWinForm
         private void _FillPersonInfo()
         {
             lblEditPersonInfo.Enabled = true;
+            _PersonID = _Person.PersonID;
             lblPersonID.Text = _Person.PersonID.ToString();
-            lblNationalNo.Text = _Person.NationalNo;
             lblFullName.Text = _Person.FullName;
+            lblNationalNo.Text = _Person.NationalNo;
             lblGendor.Text = _Person.Gendor == 0 ? "Male" : "Female"; 
             lblEmail.Text = _Person.Email;
             lblPhone.Text = _Person.Phone;

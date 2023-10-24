@@ -27,34 +27,34 @@ namespace DVLDWinForm
         }
 
 
-        private bool _ShowAddPerson;
-
+        private bool _ShowAddPerson = true;
         public bool ShowAddPerson
         {
-            get { return _ShowAddPerson; }
-
+            get
+            {
+                return _ShowAddPerson;
+            }
             set
             {
-
                 _ShowAddPerson = value;
-                btnAddNewPerson.Visible = _ShowAddPerson;
-
+               // btnAddNewPerson.Visible = _ShowAddPerson;
             }
         }
 
-        private bool _FilterEnabled;
-
+        private bool _FilterEnabled = true;
         public bool FilterEnabled
         {
-            get { return _FilterEnabled; }
-
+            get
+            {
+                return _FilterEnabled;
+            }
             set
             {
                 _FilterEnabled = value;
-                gbFilters.Enabled = _FilterEnabled;
+                //gbFilters.Enabled = _FilterEnabled;
             }
-
         }
+
 
         private int _PersonID = -1;
 
@@ -86,7 +86,7 @@ namespace DVLDWinForm
 
         public void FindNow()
         {
-            switch(cbFilterBy.SelectedText)
+            switch(cbFilterBy.Text)
             {
                 case "PersonID":
                     ctrlPersonCard1.LoadPersonInfo(int.Parse(txtFilterValue.Text));

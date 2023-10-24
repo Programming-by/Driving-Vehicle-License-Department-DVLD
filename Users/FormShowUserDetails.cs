@@ -12,10 +12,11 @@ namespace DVLDWinForm
 {
     public partial class FormShowUserDetails : Form
     {
-
-        public FormShowUserDetails()
+        int _UserID;
+        public FormShowUserDetails(int UserID)
         {
             InitializeComponent();
+            _UserID = UserID;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -23,5 +24,9 @@ namespace DVLDWinForm
             this.Close();
         }
 
+        private void FormShowUserDetails_Load(object sender, EventArgs e)
+        {
+            ctrlUserCard1.LoadUserInfo(_UserID);
+        }
     }
 }

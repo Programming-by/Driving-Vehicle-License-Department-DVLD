@@ -225,10 +225,10 @@ namespace DVLDWinForm
             _Person.DateOfBirth = dtpDateOfBirth.Value;
             if (rbMale.Checked)
             {
-                _Person.Gendor = (short) enGendor.Male;
+                _Person.Gendor = (byte) enGendor.Male;
             } else
             {
-                _Person.Gendor = (short) enGendor.Female;
+                _Person.Gendor = (byte) enGendor.Female;
             }
 
             _Person.NationalityCountryID = NationalityCountryID;

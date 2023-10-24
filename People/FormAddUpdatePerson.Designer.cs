@@ -78,7 +78,7 @@
             this.lblTitle.Location = new System.Drawing.Point(483, 26);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(154, 24);
+            this.lblTitle.Size = new System.Drawing.Size(195, 29);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Add New Person";
             // 
@@ -126,7 +126,7 @@
             this.lblRemoveImage.Location = new System.Drawing.Point(1276, 580);
             this.lblRemoveImage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRemoveImage.Name = "lblRemoveImage";
-            this.lblRemoveImage.Size = new System.Drawing.Size(59, 16);
+            this.lblRemoveImage.Size = new System.Drawing.Size(70, 20);
             this.lblRemoveImage.TabIndex = 36;
             this.lblRemoveImage.TabStop = true;
             this.lblRemoveImage.Text = "Remove";
@@ -139,7 +139,7 @@
             this.lblSetImage.Location = new System.Drawing.Point(1276, 530);
             this.lblSetImage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSetImage.Name = "lblSetImage";
-            this.lblSetImage.Size = new System.Drawing.Size(68, 16);
+            this.lblSetImage.Size = new System.Drawing.Size(84, 20);
             this.lblSetImage.TabIndex = 35;
             this.lblSetImage.TabStop = true;
             this.lblSetImage.Text = "Set Image";
@@ -163,7 +163,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(248, 37);
             this.txtEmail.TabIndex = 33;
-            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // cbCountries
             // 
@@ -171,9 +170,8 @@
             this.cbCountries.Location = new System.Drawing.Point(770, 341);
             this.cbCountries.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbCountries.Name = "cbCountries";
-            this.cbCountries.Size = new System.Drawing.Size(240, 24);
+            this.cbCountries.Size = new System.Drawing.Size(240, 28);
             this.cbCountries.TabIndex = 32;
-            this.cbCountries.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txtPhone
             // 
@@ -191,7 +189,7 @@
             this.rbFemale.Location = new System.Drawing.Point(332, 281);
             this.rbFemale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(71, 20);
+            this.rbFemale.Size = new System.Drawing.Size(85, 24);
             this.rbFemale.TabIndex = 30;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
@@ -204,7 +202,7 @@
             this.rbMale.Location = new System.Drawing.Point(208, 281);
             this.rbMale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(55, 20);
+            this.rbMale.Size = new System.Drawing.Size(66, 24);
             this.rbMale.TabIndex = 29;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
@@ -216,7 +214,7 @@
             this.dtpDateOfBirth.Location = new System.Drawing.Point(770, 167);
             this.dtpDateOfBirth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
-            this.dtpDateOfBirth.Size = new System.Drawing.Size(248, 22);
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(248, 26);
             this.dtpDateOfBirth.TabIndex = 28;
             // 
             // txtNationalNo
@@ -235,7 +233,7 @@
             this.label23.Location = new System.Drawing.Point(840, 24);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(38, 16);
+            this.label23.Size = new System.Drawing.Size(47, 20);
             this.label23.TabIndex = 26;
             this.label23.Text = "Third";
             // 
@@ -245,7 +243,7 @@
             this.label22.Location = new System.Drawing.Point(555, 24);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(54, 16);
+            this.label22.Size = new System.Drawing.Size(65, 20);
             this.label22.TabIndex = 25;
             this.label22.Text = "Second";
             // 
@@ -255,7 +253,7 @@
             this.label13.Location = new System.Drawing.Point(229, 24);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 16);
+            this.label13.Size = new System.Drawing.Size(43, 20);
             this.label13.TabIndex = 24;
             this.label13.Text = "First";
             // 
@@ -265,7 +263,7 @@
             this.label2.Location = new System.Drawing.Point(1138, 24);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 16);
+            this.label2.Size = new System.Drawing.Size(42, 20);
             this.label2.TabIndex = 23;
             this.label2.Text = "Last";
             // 
@@ -329,7 +327,7 @@
             this.label9.Location = new System.Drawing.Point(543, 341);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 20);
+            this.label9.Size = new System.Drawing.Size(95, 25);
             this.label9.TabIndex = 8;
             this.label9.Text = "Country:";
             // 
@@ -340,7 +338,7 @@
             this.label8.Location = new System.Drawing.Point(543, 258);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 20);
+            this.label8.Size = new System.Drawing.Size(81, 25);
             this.label8.TabIndex = 7;
             this.label8.Text = "Phone:";
             // 
@@ -351,7 +349,7 @@
             this.label7.Location = new System.Drawing.Point(508, 162);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 20);
+            this.label7.Size = new System.Drawing.Size(131, 25);
             this.label7.TabIndex = 6;
             this.label7.Text = "DateOfBirth:";
             // 
@@ -362,7 +360,7 @@
             this.label6.Location = new System.Drawing.Point(9, 273);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 20);
+            this.label6.Size = new System.Drawing.Size(90, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Gendor:";
             // 
@@ -373,7 +371,7 @@
             this.label5.Location = new System.Drawing.Point(14, 353);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 20);
+            this.label5.Size = new System.Drawing.Size(72, 25);
             this.label5.TabIndex = 4;
             this.label5.Text = "Email:";
             // 
@@ -384,7 +382,7 @@
             this.label4.Location = new System.Drawing.Point(9, 459);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 20);
+            this.label4.Size = new System.Drawing.Size(99, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Address:";
             // 
@@ -395,7 +393,7 @@
             this.label3.Location = new System.Drawing.Point(9, 162);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 20);
+            this.label3.Size = new System.Drawing.Size(125, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "NationalNo:";
             // 
@@ -406,7 +404,7 @@
             this.label19.Location = new System.Drawing.Point(12, 36);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 20);
+            this.label19.Size = new System.Drawing.Size(75, 25);
             this.label19.TabIndex = 1;
             this.label19.Text = "Name:";
             // 
@@ -417,7 +415,7 @@
             this.label20.Location = new System.Drawing.Point(37, 52);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(89, 20);
+            this.label20.Size = new System.Drawing.Size(108, 25);
             this.label20.TabIndex = 0;
             this.label20.Text = "PersonID:";
             // 
@@ -428,14 +426,14 @@
             this.lblPersonID.Location = new System.Drawing.Point(169, 52);
             this.lblPersonID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPersonID.Name = "lblPersonID";
-            this.lblPersonID.Size = new System.Drawing.Size(38, 20);
+            this.lblPersonID.Size = new System.Drawing.Size(49, 25);
             this.lblPersonID.TabIndex = 19;
             this.lblPersonID.Text = "N/A";
             // 
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(1065, 881);
+            this.btnClose.Location = new System.Drawing.Point(871, 790);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(180, 73);
@@ -447,7 +445,7 @@
             // btnSave
             // 
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSave.Location = new System.Drawing.Point(1272, 881);
+            this.btnSave.Location = new System.Drawing.Point(1086, 790);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(180, 73);
@@ -467,11 +465,11 @@
             // FormAddUpdatePerson
             // 
             this.AcceptButton = this.btnSave;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(1540, 845);
+            this.ClientSize = new System.Drawing.Size(1540, 922);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblPersonID);
