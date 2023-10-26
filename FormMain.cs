@@ -93,5 +93,42 @@ namespace DVLDWinForm
 
             frm.ShowDialog();
         }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormManageApplicationTypes frm = new FormManageApplicationTypes();
+
+            frm.ShowDialog();
+        }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormManageTestTypes frm = new FormManageTestTypes();
+
+            frm.ShowDialog();
+        }
+
+        private void manageLocalDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLocalDrivingLicenseApplications frm = new FormLocalDrivingLicenseApplications();
+
+            frm.ShowDialog();
+
+        }
+
+        private void localLicenseToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FormNewDrivingLicenseApplication frm = new FormNewDrivingLicenseApplication(clsGlobal.CurrentUser.UserID);
+                
+           frm.ShowDialog();
+
+        }
+
+        private void ManageInternationaDrivingLicenseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormInternationalDrivingLicenseApplications frm = new FormInternationalDrivingLicenseApplications();
+
+            frm.ShowDialog();
+        }
     }
 }

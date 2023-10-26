@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblTestTypeID = new System.Windows.Forms.Label();
-            this.txtTestTypeFees = new System.Windows.Forms.TextBox();
-            this.txtTestTypeTitle = new System.Windows.Forms.TextBox();
+            this.txtFees = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTestTypeDescription = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -71,21 +74,23 @@
             this.lblTestTypeID.TabIndex = 45;
             this.lblTestTypeID.Text = "???";
             // 
-            // txtTestTypeFees
+            // txtFees
             // 
-            this.txtTestTypeFees.Location = new System.Drawing.Point(186, 352);
-            this.txtTestTypeFees.Multiline = true;
-            this.txtTestTypeFees.Name = "txtTestTypeFees";
-            this.txtTestTypeFees.Size = new System.Drawing.Size(236, 31);
-            this.txtTestTypeFees.TabIndex = 44;
+            this.txtFees.Location = new System.Drawing.Point(186, 352);
+            this.txtFees.Multiline = true;
+            this.txtFees.Name = "txtFees";
+            this.txtFees.Size = new System.Drawing.Size(236, 31);
+            this.txtFees.TabIndex = 44;
+            this.txtFees.Validating += new System.ComponentModel.CancelEventHandler(this.txtFees_Validating);
             // 
-            // txtTestTypeTitle
+            // txtTitle
             // 
-            this.txtTestTypeTitle.Location = new System.Drawing.Point(186, 195);
-            this.txtTestTypeTitle.Multiline = true;
-            this.txtTestTypeTitle.Name = "txtTestTypeTitle";
-            this.txtTestTypeTitle.Size = new System.Drawing.Size(236, 31);
-            this.txtTestTypeTitle.TabIndex = 43;
+            this.txtTitle.Location = new System.Drawing.Point(186, 195);
+            this.txtTitle.Multiline = true;
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(236, 31);
+            this.txtTitle.TabIndex = 43;
+            this.txtTitle.Validating += new System.ComponentModel.CancelEventHandler(this.txtTitle_Validating);
             // 
             // label4
             // 
@@ -128,13 +133,14 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Update Test Types";
             // 
-            // txtTestTypeDescription
+            // txtDescription
             // 
-            this.txtTestTypeDescription.Location = new System.Drawing.Point(186, 269);
-            this.txtTestTypeDescription.Multiline = true;
-            this.txtTestTypeDescription.Name = "txtTestTypeDescription";
-            this.txtTestTypeDescription.Size = new System.Drawing.Size(236, 31);
-            this.txtTestTypeDescription.TabIndex = 48;
+            this.txtDescription.Location = new System.Drawing.Point(186, 269);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(236, 31);
+            this.txtDescription.TabIndex = 48;
+            this.txtDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtDescription_Validating);
             // 
             // label5
             // 
@@ -146,18 +152,22 @@
             this.label5.TabIndex = 49;
             this.label5.Text = "Description:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormUpdateTestType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 478);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtTestTypeDescription);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblTestTypeID);
-            this.Controls.Add(this.txtTestTypeFees);
-            this.Controls.Add(this.txtTestTypeTitle);
+            this.Controls.Add(this.txtFees);
+            this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -165,6 +175,7 @@
             this.Name = "FormUpdateTestType";
             this.Text = "FormUpdateTestType";
             this.Load += new System.EventHandler(this.FormUpdateTestType_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,13 +186,14 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblTestTypeID;
-        private System.Windows.Forms.TextBox txtTestTypeFees;
-        private System.Windows.Forms.TextBox txtTestTypeTitle;
+        private System.Windows.Forms.TextBox txtFees;
+        private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTestTypeDescription;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

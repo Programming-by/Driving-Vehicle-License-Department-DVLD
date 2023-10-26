@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applications\International Driving License Application\FormInternationalDrivingLicenseApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\International Driving License Application\FormInternationalDrivingLicenseApplications.Designer.cs">
+      <DependentUpon>FormInternationalDrivingLicenseApplications.cs</DependentUpon>
+    </Compile>
     <Compile Include="People\FormFindPerson.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,16 +98,16 @@
     <Compile Include="Users\FormAddEditUser.Designer.cs">
       <DependentUpon>FormAddEditUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChangePassword.cs">
+    <Compile Include="Users\FormChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormChangePassword.Designer.cs">
+    <Compile Include="Users\FormChangePassword.Designer.cs">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLocalDrivingLicenseApplications.cs">
+    <Compile Include="Applications\Local Driving License Applications\FormLocalDrivingLicenseApplications.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLocalDrivingLicenseApplications.Designer.cs">
+    <Compile Include="Applications\Local Driving License Applications\FormLocalDrivingLicenseApplications.Designer.cs">
       <DependentUpon>FormLocalDrivingLicenseApplications.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\FormLogin.cs">
@@ -110,22 +116,22 @@
     <Compile Include="Login\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormManageApplicationTypes.cs">
+    <Compile Include="Applications\Application Types\FormManageApplicationTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormManageApplicationTypes.Designer.cs">
+    <Compile Include="Applications\Application Types\FormManageApplicationTypes.Designer.cs">
       <DependentUpon>FormManageApplicationTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormManageTestTypes.cs">
+    <Compile Include="Tests\Test Types\FormManageTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormManageTestTypes.Designer.cs">
+    <Compile Include="Tests\Test Types\FormManageTestTypes.Designer.cs">
       <DependentUpon>FormManageTestTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNewDrivingLicenseApplication.cs">
+    <Compile Include="Applications\New Local Driving License Application\FormNewDrivingLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormNewDrivingLicenseApplication.Designer.cs">
+    <Compile Include="Applications\New Local Driving License Application\FormNewDrivingLicenseApplication.Designer.cs">
       <DependentUpon>FormNewDrivingLicenseApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="People\FormShowAllPeople.cs">
@@ -152,20 +158,23 @@
     <Compile Include="Users\FormShowUserDetails.Designer.cs">
       <DependentUpon>FormShowUserDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUpdateApplicationType.cs">
+    <Compile Include="Applications\Application Types\FormUpdateApplicationType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUpdateApplicationType.Designer.cs">
+    <Compile Include="Applications\Application Types\FormUpdateApplicationType.Designer.cs">
       <DependentUpon>FormUpdateApplicationType.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUpdateTestType.cs">
+    <Compile Include="Tests\Test Types\FormUpdateTestType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUpdateTestType.Designer.cs">
+    <Compile Include="Tests\Test Types\FormUpdateTestType.Designer.cs">
       <DependentUpon>FormUpdateTestType.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Applications\International Driving License Application\FormInternationalDrivingLicenseApplications.resx">
+      <DependentUpon>FormInternationalDrivingLicenseApplications.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="People\FormFindPerson.resx">
       <DependentUpon>FormFindPerson.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,22 +196,22 @@
     <EmbeddedResource Include="Users\FormAddEditUser.resx">
       <DependentUpon>FormAddEditUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormChangePassword.resx">
+    <EmbeddedResource Include="Users\FormChangePassword.resx">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLocalDrivingLicenseApplications.resx">
+    <EmbeddedResource Include="Applications\Local Driving License Applications\FormLocalDrivingLicenseApplications.resx">
       <DependentUpon>FormLocalDrivingLicenseApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormManageApplicationTypes.resx">
+    <EmbeddedResource Include="Applications\Application Types\FormManageApplicationTypes.resx">
       <DependentUpon>FormManageApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormManageTestTypes.resx">
+    <EmbeddedResource Include="Tests\Test Types\FormManageTestTypes.resx">
       <DependentUpon>FormManageTestTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNewDrivingLicenseApplication.resx">
+    <EmbeddedResource Include="Applications\New Local Driving License Application\FormNewDrivingLicenseApplication.resx">
       <DependentUpon>FormNewDrivingLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\FormShowAllPeople.resx">
@@ -217,10 +226,10 @@
     <EmbeddedResource Include="Users\FormShowUserDetails.resx">
       <DependentUpon>FormShowUserDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUpdateApplicationType.resx">
+    <EmbeddedResource Include="Applications\Application Types\FormUpdateApplicationType.resx">
       <DependentUpon>FormUpdateApplicationType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUpdateTestType.resx">
+    <EmbeddedResource Include="Tests\Test Types\FormUpdateTestType.resx">
       <DependentUpon>FormUpdateTestType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -371,6 +380,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Female 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Application 64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

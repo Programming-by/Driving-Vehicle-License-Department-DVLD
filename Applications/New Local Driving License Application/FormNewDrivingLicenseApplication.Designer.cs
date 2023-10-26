@@ -35,27 +35,28 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.ctrlPersonCardWithFilter1 = new DVLDWinForm.ctrlPersonCardWithFilter();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblAppID = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbApplicationInfo = new System.Windows.Forms.TabControl();
+            this.tpApplicationInfo = new System.Windows.Forms.TabPage();
             this.cbLicenseClasses = new System.Windows.Forms.ComboBox();
             this.lblCreatedBy = new System.Windows.Forms.Label();
-            this.lblApplicationFees = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
+            this.lblAppFees = new System.Windows.Forms.Label();
+            this.lblAppDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblMode = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tabPage1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tbApplicationInfo.SuspendLayout();
+            this.tpApplicationInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSave
             // 
+            this.btnSave.Enabled = false;
             this.btnSave.Location = new System.Drawing.Point(986, 504);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(123, 40);
@@ -79,7 +80,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(631, 379);
+            this.btnNext.Location = new System.Drawing.Point(925, 351);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(123, 40);
             this.btnNext.TabIndex = 32;
@@ -89,8 +90,10 @@
             // 
             // ctrlPersonCardWithFilter1
             // 
+            this.ctrlPersonCardWithFilter1.FilterEnabled = true;
             this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(-4, 0);
             this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
+            this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
             this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(890, 454);
             this.ctrlPersonCardWithFilter1.TabIndex = 0;
             // 
@@ -106,15 +109,15 @@
             this.tabPage1.Text = "Personal Info";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // lblAppID
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(342, 55);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 29);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "[???]";
+            this.lblAppID.AutoSize = true;
+            this.lblAppID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppID.Location = new System.Drawing.Point(342, 55);
+            this.lblAppID.Name = "lblAppID";
+            this.lblAppID.Size = new System.Drawing.Size(68, 29);
+            this.lblAppID.TabIndex = 4;
+            this.lblAppID.Text = "[???]";
             // 
             // label5
             // 
@@ -156,35 +159,35 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "D.L. Application ID:";
             // 
-            // tabControl1
+            // tbApplicationInfo
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(48, 34);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1121, 464);
-            this.tabControl1.TabIndex = 34;
+            this.tbApplicationInfo.Controls.Add(this.tabPage1);
+            this.tbApplicationInfo.Controls.Add(this.tpApplicationInfo);
+            this.tbApplicationInfo.Location = new System.Drawing.Point(48, 34);
+            this.tbApplicationInfo.Name = "tbApplicationInfo";
+            this.tbApplicationInfo.SelectedIndex = 0;
+            this.tbApplicationInfo.Size = new System.Drawing.Size(1121, 464);
+            this.tbApplicationInfo.TabIndex = 34;
             // 
-            // tabPage2
+            // tpApplicationInfo
             // 
-            this.tabPage2.Controls.Add(this.cbLicenseClasses);
-            this.tabPage2.Controls.Add(this.lblCreatedBy);
-            this.tabPage2.Controls.Add(this.lblApplicationFees);
-            this.tabPage2.Controls.Add(this.lblDate);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1113, 435);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Application Info";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tpApplicationInfo.Controls.Add(this.cbLicenseClasses);
+            this.tpApplicationInfo.Controls.Add(this.lblCreatedBy);
+            this.tpApplicationInfo.Controls.Add(this.lblAppFees);
+            this.tpApplicationInfo.Controls.Add(this.lblAppDate);
+            this.tpApplicationInfo.Controls.Add(this.label1);
+            this.tpApplicationInfo.Controls.Add(this.lblAppID);
+            this.tpApplicationInfo.Controls.Add(this.label5);
+            this.tpApplicationInfo.Controls.Add(this.label4);
+            this.tpApplicationInfo.Controls.Add(this.label3);
+            this.tpApplicationInfo.Controls.Add(this.label2);
+            this.tpApplicationInfo.Location = new System.Drawing.Point(4, 25);
+            this.tpApplicationInfo.Name = "tpApplicationInfo";
+            this.tpApplicationInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tpApplicationInfo.Size = new System.Drawing.Size(1113, 435);
+            this.tpApplicationInfo.TabIndex = 1;
+            this.tpApplicationInfo.Text = "Application Info";
+            this.tpApplicationInfo.UseVisualStyleBackColor = true;
             // 
             // cbLicenseClasses
             // 
@@ -204,25 +207,25 @@
             this.lblCreatedBy.TabIndex = 12;
             this.lblCreatedBy.Text = "[???]";
             // 
-            // lblApplicationFees
+            // lblAppFees
             // 
-            this.lblApplicationFees.AutoSize = true;
-            this.lblApplicationFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApplicationFees.Location = new System.Drawing.Point(349, 235);
-            this.lblApplicationFees.Name = "lblApplicationFees";
-            this.lblApplicationFees.Size = new System.Drawing.Size(68, 29);
-            this.lblApplicationFees.TabIndex = 11;
-            this.lblApplicationFees.Text = "[???]";
+            this.lblAppFees.AutoSize = true;
+            this.lblAppFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppFees.Location = new System.Drawing.Point(349, 235);
+            this.lblAppFees.Name = "lblAppFees";
+            this.lblAppFees.Size = new System.Drawing.Size(68, 29);
+            this.lblAppFees.TabIndex = 11;
+            this.lblAppFees.Text = "[???]";
             // 
-            // lblDate
+            // lblAppDate
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(342, 121);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(68, 29);
-            this.lblDate.TabIndex = 10;
-            this.lblDate.Text = "[???]";
+            this.lblAppDate.AutoSize = true;
+            this.lblAppDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppDate.Location = new System.Drawing.Point(342, 121);
+            this.lblAppDate.Name = "lblAppDate";
+            this.lblAppDate.Size = new System.Drawing.Size(68, 29);
+            this.lblAppDate.TabIndex = 10;
+            this.lblAppDate.Text = "[???]";
             // 
             // label1
             // 
@@ -234,16 +237,16 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Created By:";
             // 
-            // lblMode
+            // lblTitle
             // 
-            this.lblMode.AutoSize = true;
-            this.lblMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMode.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblMode.Location = new System.Drawing.Point(443, 11);
-            this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(423, 29);
-            this.lblMode.TabIndex = 33;
-            this.lblMode.Text = "New Local Driving License Application";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblTitle.Location = new System.Drawing.Point(443, 11);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(423, 29);
+            this.lblTitle.TabIndex = 33;
+            this.lblTitle.Text = "New Local Driving License Application";
             // 
             // FormNewDrivingLicenseApplication
             // 
@@ -252,16 +255,16 @@
             this.ClientSize = new System.Drawing.Size(1254, 578);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.lblMode);
+            this.Controls.Add(this.tbApplicationInfo);
+            this.Controls.Add(this.lblTitle);
             this.Name = "FormNewDrivingLicenseApplication";
             this.Text = "FormNewDrivingLicenseApplication";
             this.Load += new System.EventHandler(this.FormNewDrivingLicenseApplication_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.tabPage1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tbApplicationInfo.ResumeLayout(false);
+            this.tpApplicationInfo.ResumeLayout(false);
+            this.tpApplicationInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,20 +275,20 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tbApplicationInfo;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnNext;
         private ctrlPersonCardWithFilter ctrlPersonCardWithFilter1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TabPage tpApplicationInfo;
+        private System.Windows.Forms.Label lblAppID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblMode;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblCreatedBy;
-        private System.Windows.Forms.Label lblApplicationFees;
-        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblAppFees;
+        private System.Windows.Forms.Label lblAppDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbLicenseClasses;
     }

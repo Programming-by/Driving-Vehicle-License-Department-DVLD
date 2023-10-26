@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.lblTestTypesCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvAllPeople = new System.Windows.Forms.DataGridView();
+            this.dgvTestTypes = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTestTypes)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,19 +60,19 @@
             this.label2.TabIndex = 37;
             this.label2.Text = "# Records: ";
             // 
-            // dgvAllPeople
+            // dgvTestTypes
             // 
-            this.dgvAllPeople.AllowUserToAddRows = false;
-            this.dgvAllPeople.AllowUserToDeleteRows = false;
-            this.dgvAllPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllPeople.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvAllPeople.Location = new System.Drawing.Point(12, 106);
-            this.dgvAllPeople.Name = "dgvAllPeople";
-            this.dgvAllPeople.ReadOnly = true;
-            this.dgvAllPeople.RowHeadersWidth = 51;
-            this.dgvAllPeople.RowTemplate.Height = 24;
-            this.dgvAllPeople.Size = new System.Drawing.Size(1041, 295);
-            this.dgvAllPeople.TabIndex = 35;
+            this.dgvTestTypes.AllowUserToAddRows = false;
+            this.dgvTestTypes.AllowUserToDeleteRows = false;
+            this.dgvTestTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTestTypes.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvTestTypes.Location = new System.Drawing.Point(12, 106);
+            this.dgvTestTypes.Name = "dgvTestTypes";
+            this.dgvTestTypes.ReadOnly = true;
+            this.dgvTestTypes.RowHeadersWidth = 51;
+            this.dgvTestTypes.RowTemplate.Height = 24;
+            this.dgvTestTypes.Size = new System.Drawing.Size(1041, 295);
+            this.dgvTestTypes.TabIndex = 35;
             // 
             // contextMenuStrip1
             // 
@@ -80,12 +80,12 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 28);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.editToolStripMenuItem.Text = "Edit Test Type";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -119,12 +119,12 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblTestTypesCount);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvAllPeople);
+            this.Controls.Add(this.dgvTestTypes);
             this.Controls.Add(this.label1);
             this.Name = "FormManageTestTypes";
             this.Text = "FormManageTestTypes";
             this.Load += new System.EventHandler(this.FormManageTestTypes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTestTypes)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,7 +135,7 @@
 
         private System.Windows.Forms.Label lblTestTypesCount;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvAllPeople;
+        private System.Windows.Forms.DataGridView dgvTestTypes;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.Label label1;

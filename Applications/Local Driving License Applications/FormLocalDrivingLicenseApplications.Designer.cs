@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvAllPeople = new System.Windows.Forms.DataGridView();
+            this.dgvApplications = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,25 +38,25 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.cbFilters = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtFilter1 = new System.Windows.Forms.MaskedTextBox();
             this.btnAddNewApplication = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).BeginInit();
+            this.txtFilter1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvApplications)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvAllPeople
+            // dgvApplications
             // 
-            this.dgvAllPeople.AllowUserToAddRows = false;
-            this.dgvAllPeople.AllowUserToDeleteRows = false;
-            this.dgvAllPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllPeople.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvAllPeople.Location = new System.Drawing.Point(23, 116);
-            this.dgvAllPeople.Name = "dgvAllPeople";
-            this.dgvAllPeople.ReadOnly = true;
-            this.dgvAllPeople.RowHeadersWidth = 51;
-            this.dgvAllPeople.RowTemplate.Height = 24;
-            this.dgvAllPeople.Size = new System.Drawing.Size(1041, 295);
-            this.dgvAllPeople.TabIndex = 35;
+            this.dgvApplications.AllowUserToAddRows = false;
+            this.dgvApplications.AllowUserToDeleteRows = false;
+            this.dgvApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvApplications.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvApplications.Location = new System.Drawing.Point(23, 116);
+            this.dgvApplications.Name = "dgvApplications";
+            this.dgvApplications.ReadOnly = true;
+            this.dgvApplications.RowHeadersWidth = 51;
+            this.dgvApplications.RowTemplate.Height = 24;
+            this.dgvApplications.Size = new System.Drawing.Size(1184, 295);
+            this.dgvApplications.TabIndex = 35;
             // 
             // contextMenuStrip1
             // 
@@ -105,7 +105,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(931, 434);
+            this.btnClose.Location = new System.Drawing.Point(931, 421);
             this.btnClose.Name = "btnClose";
             this.btnClose.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnClose.Size = new System.Drawing.Size(133, 57);
@@ -139,35 +139,35 @@
             this.label3.TabIndex = 39;
             this.label3.Text = "Filter By:";
             // 
-            // txtFilter1
-            // 
-            this.txtFilter1.Location = new System.Drawing.Point(327, 77);
-            this.txtFilter1.Name = "txtFilter1";
-            this.txtFilter1.Size = new System.Drawing.Size(147, 22);
-            this.txtFilter1.TabIndex = 41;
-            this.txtFilter1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtFilter1_MaskInputRejected);
-            this.txtFilter1.TextChanged += new System.EventHandler(this.txtFilter1_TextChanged);
-            // 
             // btnAddNewApplication
             // 
-            this.btnAddNewApplication.Location = new System.Drawing.Point(984, 54);
+            this.btnAddNewApplication.Image = global::DVLDWinForm.Properties.Resources.New_Application_64;
+            this.btnAddNewApplication.Location = new System.Drawing.Point(1117, 25);
             this.btnAddNewApplication.Name = "btnAddNewApplication";
-            this.btnAddNewApplication.Size = new System.Drawing.Size(90, 56);
+            this.btnAddNewApplication.Size = new System.Drawing.Size(90, 70);
             this.btnAddNewApplication.TabIndex = 42;
-            this.btnAddNewApplication.Text = "button1";
             this.btnAddNewApplication.UseVisualStyleBackColor = true;
             this.btnAddNewApplication.Click += new System.EventHandler(this.btnAddNewApplication_Click);
+            // 
+            // txtFilter1
+            // 
+            this.txtFilter1.Location = new System.Drawing.Point(336, 75);
+            this.txtFilter1.Name = "txtFilter1";
+            this.txtFilter1.Size = new System.Drawing.Size(155, 22);
+            this.txtFilter1.TabIndex = 43;
+            this.txtFilter1.TextChanged += new System.EventHandler(this.txtFilter1_TextChanged);
+            this.txtFilter1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilter1_KeyPress);
             // 
             // FormLocalDrivingLicenseApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1219, 519);
-            this.Controls.Add(this.btnAddNewApplication);
             this.Controls.Add(this.txtFilter1);
+            this.Controls.Add(this.btnAddNewApplication);
             this.Controls.Add(this.cbFilters);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dgvAllPeople);
+            this.Controls.Add(this.dgvApplications);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblLocalDrivingLicenseApplicationsCount);
             this.Controls.Add(this.label2);
@@ -175,7 +175,7 @@
             this.Name = "FormLocalDrivingLicenseApplications";
             this.Text = "FormLocalDrivingLicenseApplications";
             this.Load += new System.EventHandler(this.FormLocalDrivingLicenseApplications_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvApplications)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,7 +184,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvAllPeople;
+        private System.Windows.Forms.DataGridView dgvApplications;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.Label label1;
@@ -193,7 +193,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ComboBox cbFilters;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox txtFilter1;
         private System.Windows.Forms.Button btnAddNewApplication;
+        private System.Windows.Forms.TextBox txtFilter1;
     }
 }

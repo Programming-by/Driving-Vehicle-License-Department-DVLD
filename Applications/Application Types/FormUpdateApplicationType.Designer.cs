@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtApplicationTitle = new System.Windows.Forms.TextBox();
-            this.txtApplicationFees = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.txtFees = new System.Windows.Forms.TextBox();
             this.lblApplicationTypeID = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -80,21 +83,23 @@
             this.label4.TabIndex = 33;
             this.label4.Text = "Fees:";
             // 
-            // txtApplicationTitle
+            // txtTitle
             // 
-            this.txtApplicationTitle.Location = new System.Drawing.Point(234, 228);
-            this.txtApplicationTitle.Multiline = true;
-            this.txtApplicationTitle.Name = "txtApplicationTitle";
-            this.txtApplicationTitle.Size = new System.Drawing.Size(236, 31);
-            this.txtApplicationTitle.TabIndex = 34;
+            this.txtTitle.Location = new System.Drawing.Point(234, 228);
+            this.txtTitle.Multiline = true;
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(236, 31);
+            this.txtTitle.TabIndex = 34;
+            this.txtTitle.Validating += new System.ComponentModel.CancelEventHandler(this.txtTitle_Validating);
             // 
-            // txtApplicationFees
+            // txtFees
             // 
-            this.txtApplicationFees.Location = new System.Drawing.Point(234, 293);
-            this.txtApplicationFees.Multiline = true;
-            this.txtApplicationFees.Name = "txtApplicationFees";
-            this.txtApplicationFees.Size = new System.Drawing.Size(236, 31);
-            this.txtApplicationFees.TabIndex = 35;
+            this.txtFees.Location = new System.Drawing.Point(234, 293);
+            this.txtFees.Multiline = true;
+            this.txtFees.Name = "txtFees";
+            this.txtFees.Size = new System.Drawing.Size(236, 31);
+            this.txtFees.TabIndex = 35;
+            this.txtFees.Validating += new System.ComponentModel.CancelEventHandler(this.txtFees_Validating);
             // 
             // lblApplicationTypeID
             // 
@@ -126,6 +131,10 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormUpdateApplicationType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -134,8 +143,8 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblApplicationTypeID);
-            this.Controls.Add(this.txtApplicationFees);
-            this.Controls.Add(this.txtApplicationTitle);
+            this.Controls.Add(this.txtFees);
+            this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -143,6 +152,7 @@
             this.Name = "FormUpdateApplicationType";
             this.Text = "Update Application Type";
             this.Load += new System.EventHandler(this.FormUpdateApplicationType_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,10 +164,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtApplicationTitle;
-        private System.Windows.Forms.TextBox txtApplicationFees;
+        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.TextBox txtFees;
         private System.Windows.Forms.Label lblApplicationTypeID;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
