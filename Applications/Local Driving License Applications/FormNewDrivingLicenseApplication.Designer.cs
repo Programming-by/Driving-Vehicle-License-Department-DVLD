@@ -33,14 +33,13 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnNext = new System.Windows.Forms.Button();
-            this.ctrlPersonCardWithFilter1 = new DVLDWinForm.ctrlPersonCardWithFilter();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lblAppID = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbApplicationInfo = new System.Windows.Forms.TabControl();
+            this.tcApplicationInfo = new System.Windows.Forms.TabControl();
             this.tpApplicationInfo = new System.Windows.Forms.TabPage();
             this.cbLicenseClasses = new System.Windows.Forms.ComboBox();
             this.lblCreatedBy = new System.Windows.Forms.Label();
@@ -48,9 +47,10 @@
             this.lblAppDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.ctrlPersonCardWithFilter1 = new DVLDWinForm.ctrlPersonCardWithFilter();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.tabPage1.SuspendLayout();
-            this.tbApplicationInfo.SuspendLayout();
+            this.tcApplicationInfo.SuspendLayout();
             this.tpApplicationInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,15 +87,6 @@
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // ctrlPersonCardWithFilter1
-            // 
-            this.ctrlPersonCardWithFilter1.FilterEnabled = true;
-            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(-4, 0);
-            this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
-            this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
-            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(890, 454);
-            this.ctrlPersonCardWithFilter1.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -159,15 +150,15 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "D.L. Application ID:";
             // 
-            // tbApplicationInfo
+            // tcApplicationInfo
             // 
-            this.tbApplicationInfo.Controls.Add(this.tabPage1);
-            this.tbApplicationInfo.Controls.Add(this.tpApplicationInfo);
-            this.tbApplicationInfo.Location = new System.Drawing.Point(48, 34);
-            this.tbApplicationInfo.Name = "tbApplicationInfo";
-            this.tbApplicationInfo.SelectedIndex = 0;
-            this.tbApplicationInfo.Size = new System.Drawing.Size(1121, 464);
-            this.tbApplicationInfo.TabIndex = 34;
+            this.tcApplicationInfo.Controls.Add(this.tabPage1);
+            this.tcApplicationInfo.Controls.Add(this.tpApplicationInfo);
+            this.tcApplicationInfo.Location = new System.Drawing.Point(48, 34);
+            this.tcApplicationInfo.Name = "tcApplicationInfo";
+            this.tcApplicationInfo.SelectedIndex = 0;
+            this.tcApplicationInfo.Size = new System.Drawing.Size(1121, 464);
+            this.tcApplicationInfo.TabIndex = 34;
             // 
             // tpApplicationInfo
             // 
@@ -192,6 +183,14 @@
             // cbLicenseClasses
             // 
             this.cbLicenseClasses.FormattingEnabled = true;
+            this.cbLicenseClasses.Items.AddRange(new object[] {
+            "Class 1 - Small Motorcycle",
+            "Class 2 - Heavy Motorcycle License",
+            "Class 3 - Ordinary driving license",
+            "Class 4 - Commercial",
+            "Class 5 - Agricultural",
+            "Class 6 - Small and medium bus",
+            "Class 7 - Truck and heavy vehicle"});
             this.cbLicenseClasses.Location = new System.Drawing.Point(347, 183);
             this.cbLicenseClasses.Name = "cbLicenseClasses";
             this.cbLicenseClasses.Size = new System.Drawing.Size(221, 24);
@@ -248,6 +247,16 @@
             this.lblTitle.TabIndex = 33;
             this.lblTitle.Text = "New Local Driving License Application";
             // 
+            // ctrlPersonCardWithFilter1
+            // 
+            this.ctrlPersonCardWithFilter1.FilterEnabled = true;
+            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(-4, 0);
+            this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
+            this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
+            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(890, 454);
+            this.ctrlPersonCardWithFilter1.TabIndex = 0;
+            this.ctrlPersonCardWithFilter1.OnPersonSelected += new System.Action<int>(this.ctrlPersonCardWithFilter1_OnPersonSelected);
+            // 
             // FormNewDrivingLicenseApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -255,14 +264,15 @@
             this.ClientSize = new System.Drawing.Size(1254, 578);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.tbApplicationInfo);
+            this.Controls.Add(this.tcApplicationInfo);
             this.Controls.Add(this.lblTitle);
             this.Name = "FormNewDrivingLicenseApplication";
             this.Text = "FormNewDrivingLicenseApplication";
+            this.Activated += new System.EventHandler(this.FormNewDrivingLicenseApplication_Activated);
             this.Load += new System.EventHandler(this.FormNewDrivingLicenseApplication_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.tabPage1.ResumeLayout(false);
-            this.tbApplicationInfo.ResumeLayout(false);
+            this.tcApplicationInfo.ResumeLayout(false);
             this.tpApplicationInfo.ResumeLayout(false);
             this.tpApplicationInfo.PerformLayout();
             this.ResumeLayout(false);
@@ -275,7 +285,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.TabControl tbApplicationInfo;
+        private System.Windows.Forms.TabControl tcApplicationInfo;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnNext;
         private ctrlPersonCardWithFilter ctrlPersonCardWithFilter1;

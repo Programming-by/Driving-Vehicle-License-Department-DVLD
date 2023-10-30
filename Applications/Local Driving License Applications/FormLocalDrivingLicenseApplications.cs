@@ -25,40 +25,37 @@ namespace DVLDWinForm
         {
             this.Close();
         }
-
-    
-
         private void FormLocalDrivingLicenseApplications_Load(object sender, EventArgs e)
         {
             _dtAllApplications = clsLocalDrivingLicenseApplications.GetAllLocalDrivingLicenseApplications();
-            dgvApplications.DataSource = _dtAllApplications;
-            cbFilters.SelectedIndex = 0;
-            lblLocalDrivingLicenseApplicationsCount.Text = dgvApplications.Rows.Count.ToString();
-            if (dgvApplications.Rows.Count > 0)
+            dgvLocalDrivingLicenseApplications.DataSource = _dtAllApplications;
+            lblLocalDrivingLicenseApplicationsCount.Text = dgvLocalDrivingLicenseApplications.Rows.Count.ToString();
+            if (dgvLocalDrivingLicenseApplications.Rows.Count > 0)
             {
 
-            dgvApplications.Columns[0].HeaderText = "L.D.L.AppID";
-            dgvApplications.Columns[0].Width = 110;
+            dgvLocalDrivingLicenseApplications.Columns[0].HeaderText = "L.D.L.AppID";
+            dgvLocalDrivingLicenseApplications.Columns[0].Width = 120;
 
-            dgvApplications.Columns[1].HeaderText = "Driving Class";
-            dgvApplications.Columns[1].Width = 350;
+            dgvLocalDrivingLicenseApplications.Columns[1].HeaderText = "Driving Class";
+            dgvLocalDrivingLicenseApplications.Columns[1].Width = 300;
 
-            dgvApplications.Columns[2].HeaderText = "National No";
-            dgvApplications.Columns[2].Width = 110;
+            dgvLocalDrivingLicenseApplications.Columns[2].HeaderText = "National No";
+            dgvLocalDrivingLicenseApplications.Columns[2].Width = 150;
 
-            dgvApplications.Columns[3].HeaderText = "Full Name";
-            dgvApplications.Columns[3].Width = 400;
+            dgvLocalDrivingLicenseApplications.Columns[3].HeaderText = "Full Name";
+            dgvLocalDrivingLicenseApplications.Columns[3].Width = 350;
 
-            dgvApplications.Columns[4].HeaderText = "Application Date";
-            dgvApplications.Columns[4].Width = 200;
+            dgvLocalDrivingLicenseApplications.Columns[4].HeaderText = "Application Date";
+            dgvLocalDrivingLicenseApplications.Columns[4].Width = 170;
 
-            dgvApplications.Columns[5].HeaderText = "Passed Tests";
-            dgvApplications.Columns[5].Width = 200;
+            dgvLocalDrivingLicenseApplications.Columns[5].HeaderText = "Passed Tests";
+            dgvLocalDrivingLicenseApplications.Columns[5].Width = 150;
 
-            dgvApplications.Columns[6].HeaderText = "Status";
-            dgvApplications.Columns[6].Width = 200;
+            dgvLocalDrivingLicenseApplications.Columns[6].HeaderText = "Status";
+            dgvLocalDrivingLicenseApplications.Columns[6].Width = 200;
 
             }
+            cbFilters.SelectedIndex = 0;
         }
 
         private void cbFilters_SelectedIndexChanged(object sender, EventArgs e)
@@ -68,6 +65,10 @@ namespace DVLDWinForm
             if (txtFilter1.Visible)
                 txtFilter1.Text = "";
                 txtFilter1.Focus();
+
+            _dtAllApplications.DefaultView.RowFilter = "";
+            lblLocalDrivingLicenseApplicationsCount.Text =  _dtAllApplications.Rows.Count.ToString();
+
         }
 
         private void txtFilter1_TextChanged(object sender, EventArgs e)
@@ -91,25 +92,22 @@ namespace DVLDWinForm
 
                     break;
                 default:
+                    FilterColumn = "None";
                     break;
             }
             if (txtFilter1.Text.Trim() == "" || cbFilters.Text == "None")
             {
                 _dtAllApplications.DefaultView.RowFilter = "";
-                lblLocalDrivingLicenseApplicationsCount.Text = dgvApplications.Rows.Count.ToString();
+                lblLocalDrivingLicenseApplicationsCount.Text = dgvLocalDrivingLicenseApplications.Rows.Count.ToString();
                 return;
             }
 
             if (FilterColumn == "LocalDrivingLicenseApplicationID")
-            {
                 _dtAllApplications.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtFilter1.Text.Trim());
-
-            }
             else
-            {
                 _dtAllApplications.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilter1.Text.Trim());
-
-            }
+         
+            lblLocalDrivingLicenseApplicationsCount.Text = dgvLocalDrivingLicenseApplications.Rows.Count.ToString();
 
         }
 
@@ -118,6 +116,8 @@ namespace DVLDWinForm
             FormNewDrivingLicenseApplication frm = new FormNewDrivingLicenseApplication();
 
             frm.ShowDialog();
+
+            FormLocalDrivingLicenseApplications_Load(null, null);
         }
 
         private void txtFilter1_KeyPress(object sender, KeyPressEventArgs e)
@@ -125,6 +125,30 @@ namespace DVLDWinForm
                 if (cbFilters.Text == "L.D.L.AppID")
                     e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
 
+        }
+
+        private void cancelApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Are you sure do want to cancel this application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+
+            int LocalDrivingLicenseID = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            clsLocalDrivingLicenseApplications LocalDrivingLicenseApplications = clsLocalDrivingLicenseApplications.FindByLocalDrivingAppLicenseID(LocalDrivingLicenseID);
+
+            if (LocalDrivingLicenseApplications != null)
+            { 
+                if (LocalDrivingLicenseApplications.Cancel())
+                {
+                    MessageBox.Show("Application Canceled Successfully", "Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FormLocalDrivingLicenseApplications_Load(null, null);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Could not cancel application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

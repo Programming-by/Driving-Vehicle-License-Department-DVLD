@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvApplications = new System.Windows.Forms.DataGridView();
+            this.dgvLocalDrivingLicenseApplications = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,31 +40,33 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnAddNewApplication = new System.Windows.Forms.Button();
             this.txtFilter1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvApplications)).BeginInit();
+            this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDrivingLicenseApplications)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvApplications
+            // dgvLocalDrivingLicenseApplications
             // 
-            this.dgvApplications.AllowUserToAddRows = false;
-            this.dgvApplications.AllowUserToDeleteRows = false;
-            this.dgvApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvApplications.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvApplications.Location = new System.Drawing.Point(23, 116);
-            this.dgvApplications.Name = "dgvApplications";
-            this.dgvApplications.ReadOnly = true;
-            this.dgvApplications.RowHeadersWidth = 51;
-            this.dgvApplications.RowTemplate.Height = 24;
-            this.dgvApplications.Size = new System.Drawing.Size(1184, 295);
-            this.dgvApplications.TabIndex = 35;
+            this.dgvLocalDrivingLicenseApplications.AllowUserToAddRows = false;
+            this.dgvLocalDrivingLicenseApplications.AllowUserToDeleteRows = false;
+            this.dgvLocalDrivingLicenseApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocalDrivingLicenseApplications.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvLocalDrivingLicenseApplications.Location = new System.Drawing.Point(23, 116);
+            this.dgvLocalDrivingLicenseApplications.Name = "dgvLocalDrivingLicenseApplications";
+            this.dgvLocalDrivingLicenseApplications.ReadOnly = true;
+            this.dgvLocalDrivingLicenseApplications.RowHeadersWidth = 51;
+            this.dgvLocalDrivingLicenseApplications.RowTemplate.Height = 24;
+            this.dgvLocalDrivingLicenseApplications.Size = new System.Drawing.Size(1184, 295);
+            this.dgvLocalDrivingLicenseApplications.TabIndex = 35;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem});
+            this.editToolStripMenuItem,
+            this.cancelApplicationToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(221, 28);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(221, 80);
             // 
             // editToolStripMenuItem
             // 
@@ -158,6 +160,13 @@
             this.txtFilter1.TextChanged += new System.EventHandler(this.txtFilter1_TextChanged);
             this.txtFilter1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilter1_KeyPress);
             // 
+            // cancelApplicationToolStripMenuItem
+            // 
+            this.cancelApplicationToolStripMenuItem.Name = "cancelApplicationToolStripMenuItem";
+            this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
+            this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
+            this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
+            // 
             // FormLocalDrivingLicenseApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -167,7 +176,7 @@
             this.Controls.Add(this.btnAddNewApplication);
             this.Controls.Add(this.cbFilters);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dgvApplications);
+            this.Controls.Add(this.dgvLocalDrivingLicenseApplications);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblLocalDrivingLicenseApplicationsCount);
             this.Controls.Add(this.label2);
@@ -175,7 +184,7 @@
             this.Name = "FormLocalDrivingLicenseApplications";
             this.Text = "FormLocalDrivingLicenseApplications";
             this.Load += new System.EventHandler(this.FormLocalDrivingLicenseApplications_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvApplications)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDrivingLicenseApplications)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,7 +193,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvApplications;
+        private System.Windows.Forms.DataGridView dgvLocalDrivingLicenseApplications;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.Label label1;
@@ -195,5 +204,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAddNewApplication;
         private System.Windows.Forms.TextBox txtFilter1;
+        private System.Windows.Forms.ToolStripMenuItem cancelApplicationToolStripMenuItem;
     }
 }

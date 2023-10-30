@@ -118,7 +118,7 @@ namespace DVLDWinForm
 
         private void localLicenseToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            FormNewDrivingLicenseApplication frm = new FormNewDrivingLicenseApplication(clsGlobal.CurrentUser.UserID);
+            FormNewDrivingLicenseApplication frm = new FormNewDrivingLicenseApplication();
                 
            frm.ShowDialog();
 

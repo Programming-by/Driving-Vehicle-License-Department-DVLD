@@ -128,10 +128,10 @@
     <Compile Include="Tests\Test Types\FormManageTestTypes.Designer.cs">
       <DependentUpon>FormManageTestTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\New Local Driving License Application\FormNewDrivingLicenseApplication.cs">
+    <Compile Include="Applications\Local Driving License Applications\FormNewDrivingLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\New Local Driving License Application\FormNewDrivingLicenseApplication.Designer.cs">
+    <Compile Include="Applications\Local Driving License Applications\FormNewDrivingLicenseApplication.Designer.cs">
       <DependentUpon>FormNewDrivingLicenseApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="People\FormShowAllPeople.cs">
@@ -211,7 +211,7 @@
     <EmbeddedResource Include="Tests\Test Types\FormManageTestTypes.resx">
       <DependentUpon>FormManageTestTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\New Local Driving License Application\FormNewDrivingLicenseApplication.resx">
+    <EmbeddedResource Include="Applications\Local Driving License Applications\FormNewDrivingLicenseApplication.resx">
       <DependentUpon>FormNewDrivingLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\FormShowAllPeople.resx">
