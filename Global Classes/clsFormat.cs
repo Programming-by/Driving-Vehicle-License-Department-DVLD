@@ -12,9 +12,9 @@ namespace DVLDClasses
     public class clsFormat
     {
 
-        public string DateToShort(DateTime Dt1)
+        public static string DateToShort(DateTime Dt1)
         {
-            return Dt1.ToString("dd/MMM/YYYY");
+            return Dt1.ToString("dd/MMM/yyyy");
         }
 
     }

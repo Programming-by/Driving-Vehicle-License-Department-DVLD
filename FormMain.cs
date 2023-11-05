@@ -69,14 +69,14 @@ namespace DVLDWinForm
 
         private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormNewDrivingLicenseApplication frm = new FormNewDrivingLicenseApplication();
+            FormAddUpdateDrivingLicenseApplication frm = new FormAddUpdateDrivingLicenseApplication();
 
             frm.ShowDialog();
         }
 
         private void localDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormLocalDrivingLicenseApplications frm = new FormLocalDrivingLicenseApplications();
+            FormListLocalDrivingLicenseApplications frm = new FormListLocalDrivingLicenseApplications();
 
             frm.ShowDialog();
         }
@@ -110,7 +110,7 @@ namespace DVLDWinForm
 
         private void manageLocalDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormLocalDrivingLicenseApplications frm = new FormLocalDrivingLicenseApplications();
+            FormListLocalDrivingLicenseApplications frm = new FormListLocalDrivingLicenseApplications();
 
             frm.ShowDialog();
 
@@ -118,7 +118,7 @@ namespace DVLDWinForm
 
         private void localLicenseToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            FormNewDrivingLicenseApplication frm = new FormNewDrivingLicenseApplication();
+            FormAddUpdateDrivingLicenseApplication frm = new FormAddUpdateDrivingLicenseApplication();
                 
            frm.ShowDialog();
 

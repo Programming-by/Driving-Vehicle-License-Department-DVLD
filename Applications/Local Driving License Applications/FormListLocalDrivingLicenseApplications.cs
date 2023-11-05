@@ -1,4 +1,9 @@
 ﻿using DVLDBusinessLayer;
+using DVLDWinForm.Applications;
+using DVLDWinForm.Applications.Local_Driving_License_Applications;
+using DVLDWinForm.Applications.Local_Driving_License_Applications.Controls;
+using DVLDWinForm.Licenses;
+using DVLDWinForm.Tests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +18,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DVLDWinForm
 {
-    public partial class FormLocalDrivingLicenseApplications : Form
+    public partial class FormListLocalDrivingLicenseApplications : Form
     {
-        public FormLocalDrivingLicenseApplications()
+        public FormListLocalDrivingLicenseApplications()
         {
             InitializeComponent();
         }
@@ -113,7 +118,7 @@ namespace DVLDWinForm
 
         private void btnAddNewApplication_Click(object sender, EventArgs e)
         {
-            FormNewDrivingLicenseApplication frm = new FormNewDrivingLicenseApplication();
+            FormAddUpdateDrivingLicenseApplication frm = new FormAddUpdateDrivingLicenseApplication();
 
             frm.ShowDialog();
 
@@ -127,6 +132,16 @@ namespace DVLDWinForm
 
         }
 
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+
+            FormAddUpdateDrivingLicenseApplication frm = new FormAddUpdateDrivingLicenseApplication(LocalDrivingLicenseApplicationID) ;
+
+            frm.ShowDialog();
+
+            FormLocalDrivingLicenseApplications_Load(null, null);
+        }
         private void cancelApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -149,6 +164,44 @@ namespace DVLDWinForm
                     MessageBox.Show("Could not cancel application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void scheduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int _LocalDrivingLicenseApplicationID = (int) dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            FormListTestAppointments frm = new FormListTestAppointments(_LocalDrivingLicenseApplicationID);
+             frm.ShowDialog();
+            FormLocalDrivingLicenseApplications_Load(null, null);
+
+        }
+
+        private void showApplicationDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int _LocalLicenseApplicationID = (int) dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            
+            FormLocalLicenseApplicationInfo frm = new FormLocalLicenseApplicationInfo(_LocalLicenseApplicationID);
+
+             frm.ShowDialog();
+
+        }
+
+        private void issueLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int _LocalLicenseApplicationID = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+
+            FormIssueDriverLicenseFirstTime frm = new FormIssueDriverLicenseFirstTime(_LocalLicenseApplicationID);
+
+            frm.ShowDialog();
+        }
+
+        private void scheduleWrittenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int _LocalDrivingLicenseApplicationID = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            FormListTestAppointments frm = new FormListTestAppointments(_LocalDrivingLicenseApplicationID);
+            frm.ShowDialog();
+            FormLocalDrivingLicenseApplications_Load(null, null);
+
         }
     }
 }

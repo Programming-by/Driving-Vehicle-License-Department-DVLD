@@ -1,6 +1,6 @@
 ﻿namespace DVLDWinForm
 {
-    partial class FormLocalDrivingLicenseApplications
+    partial class FormListLocalDrivingLicenseApplications
     {
         /// <summary>
         /// Required designer variable.
@@ -31,16 +31,22 @@
             this.components = new System.ComponentModel.Container();
             this.dgvLocalDrivingLicenseApplications = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showApplicationDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleTestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleVisionTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleWrittenTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleStreetTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.issueLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLocalDrivingLicenseApplicationsCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.cbFilters = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAddNewApplication = new System.Windows.Forms.Button();
             this.txtFilter1 = new System.Windows.Forms.TextBox();
-            this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddNewApplication = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDrivingLicenseApplications)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,16 +69,73 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showApplicationDetailsToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.cancelApplicationToolStripMenuItem});
+            this.cancelApplicationToolStripMenuItem,
+            this.scheduleTestsToolStripMenuItem,
+            this.issueLicenseToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(221, 80);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(289, 152);
+            // 
+            // showApplicationDetailsToolStripMenuItem
+            // 
+            this.showApplicationDetailsToolStripMenuItem.Name = "showApplicationDetailsToolStripMenuItem";
+            this.showApplicationDetailsToolStripMenuItem.Size = new System.Drawing.Size(288, 24);
+            this.showApplicationDetailsToolStripMenuItem.Text = "Show Application Details";
+            this.showApplicationDetailsToolStripMenuItem.Click += new System.EventHandler(this.showApplicationDetailsToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(288, 24);
             this.editToolStripMenuItem.Text = "Edit Application Type";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // cancelApplicationToolStripMenuItem
+            // 
+            this.cancelApplicationToolStripMenuItem.Name = "cancelApplicationToolStripMenuItem";
+            this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(288, 24);
+            this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
+            this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
+            // 
+            // scheduleTestsToolStripMenuItem
+            // 
+            this.scheduleTestsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scheduleVisionTestToolStripMenuItem,
+            this.scheduleWrittenTestToolStripMenuItem,
+            this.scheduleStreetTestToolStripMenuItem});
+            this.scheduleTestsToolStripMenuItem.Name = "scheduleTestsToolStripMenuItem";
+            this.scheduleTestsToolStripMenuItem.Size = new System.Drawing.Size(288, 24);
+            this.scheduleTestsToolStripMenuItem.Text = "Schedule Tests";
+            // 
+            // scheduleVisionTestToolStripMenuItem
+            // 
+            this.scheduleVisionTestToolStripMenuItem.Name = "scheduleVisionTestToolStripMenuItem";
+            this.scheduleVisionTestToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.scheduleVisionTestToolStripMenuItem.Text = "Schedule Vision Test";
+            this.scheduleVisionTestToolStripMenuItem.Click += new System.EventHandler(this.scheduleVisionTestToolStripMenuItem_Click);
+            // 
+            // scheduleWrittenTestToolStripMenuItem
+            // 
+            this.scheduleWrittenTestToolStripMenuItem.Enabled = false;
+            this.scheduleWrittenTestToolStripMenuItem.Name = "scheduleWrittenTestToolStripMenuItem";
+            this.scheduleWrittenTestToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.scheduleWrittenTestToolStripMenuItem.Text = "Schedule Written Test";
+            this.scheduleWrittenTestToolStripMenuItem.Click += new System.EventHandler(this.scheduleWrittenTestToolStripMenuItem_Click);
+            // 
+            // scheduleStreetTestToolStripMenuItem
+            // 
+            this.scheduleStreetTestToolStripMenuItem.Enabled = false;
+            this.scheduleStreetTestToolStripMenuItem.Name = "scheduleStreetTestToolStripMenuItem";
+            this.scheduleStreetTestToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.scheduleStreetTestToolStripMenuItem.Text = "Schedule Street Test";
+            // 
+            // issueLicenseToolStripMenuItem
+            // 
+            this.issueLicenseToolStripMenuItem.Name = "issueLicenseToolStripMenuItem";
+            this.issueLicenseToolStripMenuItem.Size = new System.Drawing.Size(288, 24);
+            this.issueLicenseToolStripMenuItem.Text = "Issue Driver License (First Time) ";
+            this.issueLicenseToolStripMenuItem.Click += new System.EventHandler(this.issueLicenseToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -141,6 +204,15 @@
             this.label3.TabIndex = 39;
             this.label3.Text = "Filter By:";
             // 
+            // txtFilter1
+            // 
+            this.txtFilter1.Location = new System.Drawing.Point(336, 75);
+            this.txtFilter1.Name = "txtFilter1";
+            this.txtFilter1.Size = new System.Drawing.Size(155, 22);
+            this.txtFilter1.TabIndex = 43;
+            this.txtFilter1.TextChanged += new System.EventHandler(this.txtFilter1_TextChanged);
+            this.txtFilter1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilter1_KeyPress);
+            // 
             // btnAddNewApplication
             // 
             this.btnAddNewApplication.Image = global::DVLDWinForm.Properties.Resources.New_Application_64;
@@ -151,23 +223,7 @@
             this.btnAddNewApplication.UseVisualStyleBackColor = true;
             this.btnAddNewApplication.Click += new System.EventHandler(this.btnAddNewApplication_Click);
             // 
-            // txtFilter1
-            // 
-            this.txtFilter1.Location = new System.Drawing.Point(336, 75);
-            this.txtFilter1.Name = "txtFilter1";
-            this.txtFilter1.Size = new System.Drawing.Size(155, 22);
-            this.txtFilter1.TabIndex = 43;
-            this.txtFilter1.TextChanged += new System.EventHandler(this.txtFilter1_TextChanged);
-            this.txtFilter1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilter1_KeyPress);
-            // 
-            // cancelApplicationToolStripMenuItem
-            // 
-            this.cancelApplicationToolStripMenuItem.Name = "cancelApplicationToolStripMenuItem";
-            this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
-            this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
-            this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
-            // 
-            // FormLocalDrivingLicenseApplications
+            // FormListLocalDrivingLicenseApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,7 +237,7 @@
             this.Controls.Add(this.lblLocalDrivingLicenseApplicationsCount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnClose);
-            this.Name = "FormLocalDrivingLicenseApplications";
+            this.Name = "FormListLocalDrivingLicenseApplications";
             this.Text = "FormLocalDrivingLicenseApplications";
             this.Load += new System.EventHandler(this.FormLocalDrivingLicenseApplications_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDrivingLicenseApplications)).EndInit();
@@ -205,5 +261,11 @@
         private System.Windows.Forms.Button btnAddNewApplication;
         private System.Windows.Forms.TextBox txtFilter1;
         private System.Windows.Forms.ToolStripMenuItem cancelApplicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scheduleTestsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scheduleVisionTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scheduleWrittenTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scheduleStreetTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showApplicationDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem issueLicenseToolStripMenuItem;
     }
 }

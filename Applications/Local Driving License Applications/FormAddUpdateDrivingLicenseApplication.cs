@@ -13,7 +13,7 @@ using DVLDClasses;
 
 namespace DVLDWinForm
 {
-    public partial class FormNewDrivingLicenseApplication : Form
+    public partial class FormAddUpdateDrivingLicenseApplication : Form
     {
         public enum enMode { AddNew = 0, Update = 1 }
 
@@ -23,13 +23,13 @@ namespace DVLDWinForm
         private int _SelectedPersonID = -1;
 
         clsLocalDrivingLicenseApplications _LocalDrivingLicenseApplication;
-        public FormNewDrivingLicenseApplication()
+        public FormAddUpdateDrivingLicenseApplication()
         {
             InitializeComponent();
             _Mode = enMode.AddNew;
         }
 
-        public FormNewDrivingLicenseApplication(int LocalDrivingLicenseApplicationID)
+        public FormAddUpdateDrivingLicenseApplication(int LocalDrivingLicenseApplicationID)
         {
             InitializeComponent();
             _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
@@ -76,8 +76,9 @@ namespace DVLDWinForm
                 MessageBox.Show("No Application with ID = " + _LocalDrivingLicenseApplicationID, "Application Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 this.Close();
             }
+             ctrlPersonCardWithFilter1.LoadPersonInfo(_LocalDrivingLicenseApplication.ApplicantPersonID);
              lblAppID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
-             lblAppDate.Text = _LocalDrivingLicenseApplication.ApplicationDate.ToString();
+             lblAppDate.Text =  clsFormat.DateToShort(_LocalDrivingLicenseApplication.ApplicationDate);
              cbLicenseClasses.SelectedIndex = cbLicenseClasses.FindString(clsLicenseClassData.Find(_LocalDrivingLicenseApplication.LicenseClassID).ClassName);
              lblAppFees.Text =  _LocalDrivingLicenseApplication.PaidFees.ToString();
              lblCreatedBy.Text = clsUserData.FindByUserID(_LocalDrivingLicenseApplication.CreatedByUserID).UserName;
@@ -128,12 +129,7 @@ namespace DVLDWinForm
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            if (!this.ValidateChildren())
-            {
-                MessageBox.Show("Some fields are not valid!, put the mouse over the red icon(s) to see the error", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-
-            }
+         
             int LicenseClassID = clsLicenseClassData.Find(cbLicenseClasses.Text).LicenseClassID;
 
             int ActiveApplicationID = clsApplication.GetActiveApplicationIDForLicenseClass(_SelectedPersonID, clsApplication.enApplicationType.NewDrivingLicense, LicenseClassID); ;
@@ -174,11 +170,6 @@ namespace DVLDWinForm
                 MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
-
-
-
-
-
         }
 
 
@@ -200,6 +191,11 @@ namespace DVLDWinForm
             ctrlPersonCardWithFilter1.LoadPersonInfo(PersonID);
 
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
