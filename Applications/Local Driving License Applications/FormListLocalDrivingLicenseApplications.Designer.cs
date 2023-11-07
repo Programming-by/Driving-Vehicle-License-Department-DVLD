@@ -75,7 +75,7 @@
             this.scheduleTestsToolStripMenuItem,
             this.issueLicenseToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(289, 152);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(289, 124);
             // 
             // showApplicationDetailsToolStripMenuItem
             // 
@@ -129,6 +129,7 @@
             this.scheduleStreetTestToolStripMenuItem.Name = "scheduleStreetTestToolStripMenuItem";
             this.scheduleStreetTestToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.scheduleStreetTestToolStripMenuItem.Text = "Schedule Street Test";
+            this.scheduleStreetTestToolStripMenuItem.Click += new System.EventHandler(this.scheduleStreetTestToolStripMenuItem_Click);
             // 
             // issueLicenseToolStripMenuItem
             // 

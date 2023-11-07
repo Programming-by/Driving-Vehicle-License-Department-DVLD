@@ -166,25 +166,71 @@ namespace DVLDWinForm
             }
         }
 
+        private void _ScheduleTest(clsTestType.enTestType TestType)
+        {
+            int _LocalDrivingLicenseApplicationID = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            FormListTestAppointments frm = new FormListTestAppointments(_LocalDrivingLicenseApplicationID, TestType);
+            frm.ShowDialog();
+            FormLocalDrivingLicenseApplications_Load(null, null);
+        }
         private void scheduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int _LocalDrivingLicenseApplicationID = (int) dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
-            FormListTestAppointments frm = new FormListTestAppointments(_LocalDrivingLicenseApplicationID);
-             frm.ShowDialog();
-            FormLocalDrivingLicenseApplications_Load(null, null);
-
+            _HandleCurrentTest(clsTestType.enTestType.VisionTest);
+            _ScheduleTest(clsTestType.enTestType.VisionTest);
         }
+        private void scheduleWrittenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _HandleCurrentTest(clsTestType.enTestType.WrittenTest);
 
+            _ScheduleTest(clsTestType.enTestType.WrittenTest);
+        }
+        private void scheduleStreetTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _HandleCurrentTest(clsTestType.enTestType.StreetTest);
+
+            _ScheduleTest(clsTestType.enTestType.StreetTest);
+        }
         private void showApplicationDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int _LocalLicenseApplicationID = (int) dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
             
-            FormLocalLicenseApplicationInfo frm = new FormLocalLicenseApplicationInfo(_LocalLicenseApplicationID);
+            FormLocalLicenseApplicationInfo frm = new FormLocalLicenseApplicationInfo((int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value);
 
              frm.ShowDialog();
 
         }
 
+
+        private void _HandleCurrentTest(clsTestType.enTestType TestType)
+        {
+            clsLocalDrivingLicenseApplications _LocalDrivingLicenseApplications = clsLocalDrivingLicenseApplications.FindByLocalDrivingAppLicenseID((int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value);
+
+            clsTestData LastTest = _LocalDrivingLicenseApplications.GetLastTestPerTestType(TestType);
+            switch (TestType)
+            {
+                case clsTestType.enTestType.VisionTest:
+                    scheduleVisionTestToolStripMenuItem.Enabled = true;
+                    scheduleWrittenTestToolStripMenuItem.Enabled = false;
+                    scheduleWrittenTestToolStripMenuItem.Enabled = false;
+
+                    break;
+
+                case clsTestType.enTestType.WrittenTest:
+                    scheduleVisionTestToolStripMenuItem.Enabled = false;
+                    scheduleWrittenTestToolStripMenuItem.Enabled = true;
+                    scheduleWrittenTestToolStripMenuItem.Enabled = false;
+
+                    break;
+                case clsTestType.enTestType.StreetTest:
+                    scheduleVisionTestToolStripMenuItem.Enabled = false;
+                    scheduleWrittenTestToolStripMenuItem.Enabled = false;
+                    scheduleWrittenTestToolStripMenuItem.Enabled = true;
+                    break;
+
+
+
+
+            }
+        }
         private void issueLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int _LocalLicenseApplicationID = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
@@ -194,14 +240,5 @@ namespace DVLDWinForm
             frm.ShowDialog();
         }
 
-        private void scheduleWrittenTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            int _LocalDrivingLicenseApplicationID = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
-            FormListTestAppointments frm = new FormListTestAppointments(_LocalDrivingLicenseApplicationID);
-            frm.ShowDialog();
-            FormLocalDrivingLicenseApplications_Load(null, null);
-
-        }
     }
 }

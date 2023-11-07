@@ -169,15 +169,17 @@ namespace DVLDWinForm.Tests.Controls
 
         public void LoadInfo(int LocalDrivingLicenseApplicationID, int AppointmentID = -1)
         {
-
             if (AppointmentID == -1)
                 _Mode = enMode.AddNew;
             else
                 _Mode = enMode.Update;
 
+
             _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
-            _TestAppointmentID=AppointmentID;
+            _TestAppointmentID = AppointmentID;
+            _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
             _LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplications.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplicationID);
+
             if (_LocalDrivingLicenseApplication == null)
             {
                 MessageBox.Show("Error: No Local Driving License Application with ID = " + _LocalDrivingLicenseApplicationID.ToString(),
@@ -187,21 +189,24 @@ namespace DVLDWinForm.Tests.Controls
             }
 
             if (_LocalDrivingLicenseApplication.DoesAttendTestType(_TestTypeID))
+
                 _CreationMode = enCreationMode.RetakeTestSchedule;
-            else 
-                _CreationMode= enCreationMode.FirstTimeSchedule;
+            else
+                _CreationMode = enCreationMode.FirstTimeSchedule;
+
 
             if (_CreationMode == enCreationMode.RetakeTestSchedule)
             {
-                lblRetakeAppFees.Text = clsApplicationTypesData.Find((int) clsApplication.enApplicationType.RetakeTest).Fees.ToString();
+                lblRetakeAppFees.Text = clsApplicationTypesData.Find((int)clsApplication.enApplicationType.RetakeTest).Fees.ToString();
                 gbRetakeTestInfo.Enabled = true;
                 lblTitle.Text = "Schedule Retake Test";
                 lblRetakeTestAppID.Text = "0";
-
-            } else
+            }
+            else
             {
                 gbRetakeTestInfo.Enabled = false;
                 lblTitle.Text = "Schedule Test";
+                lblRetakeAppFees.Text = "0";
                 lblRetakeTestAppID.Text = "N/A";
             }
 
@@ -209,36 +214,43 @@ namespace DVLDWinForm.Tests.Controls
             lblDrivingClass.Text = _LocalDrivingLicenseApplication.LicenseClassInfo.ClassName;
             lblFullName.Text = _LocalDrivingLicenseApplication.PersonFullName;
             lblTrial.Text = _LocalDrivingLicenseApplication.TotalTrialsPerTest(_TestTypeID).ToString();
+
+
             if (_Mode == enMode.AddNew)
             {
-                lblFees.Text = clsTestType.Find(TestTypeID).Fees.ToString();
+                lblFees.Text = clsTestType.Find(_TestTypeID).Fees.ToString();
                 dtpTestDate.MinDate = DateTime.Now;
                 lblRetakeTestAppID.Text = "N/A";
-                _TestAppointment = new clsTestAppointment();
 
-            } else
+                _TestAppointment = new clsTestAppointment();
+            }
+
+            else
             {
+
                 if (!_LoadTestAppointmentData())
                     return;
             }
 
-           lblTotalFees.Text = (Convert.ToSingle(lblFees.Text) + Convert.ToSingle(lblRetakeAppFees.Text)).ToString();
+
+            lblTotalFees.Text = (Convert.ToSingle(lblFees.Text) + Convert.ToSingle(lblRetakeAppFees.Text)).ToString();
 
 
             if (!_HandleActiveTestAppointmentConstraint())
                 return;
 
             if (!_HandleAppointmentLockedConstraint())
-                    return;
-
+                return;
 
             if (!_HandlePreviousTestConstraint())
                 return;
 
+
+
         }
         private bool _LoadTestAppointmentData()
         {
-            
+
             _TestAppointment = clsTestAppointment.Find(_TestAppointmentID);
 
             if (_TestAppointment == null)

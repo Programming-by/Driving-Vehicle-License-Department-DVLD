@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.rbPass = new System.Windows.Forms.RadioButton();
-            this.rbFail = new System.Windows.Forms.RadioButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,86 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbTestTypeImage)).BeginInit();
             this.gbTestType.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnSave
-            // 
-            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(362, 806);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(137, 36);
-            this.btnSave.TabIndex = 166;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(83, 604);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 25);
-            this.label7.TabIndex = 191;
-            this.label7.Text = "Result:";
-            // 
-            // rbPass
-            // 
-            this.rbPass.AutoSize = true;
-            this.rbPass.Location = new System.Drawing.Point(198, 604);
-            this.rbPass.Name = "rbPass";
-            this.rbPass.Size = new System.Drawing.Size(59, 20);
-            this.rbPass.TabIndex = 192;
-            this.rbPass.TabStop = true;
-            this.rbPass.Text = "Pass";
-            this.rbPass.UseVisualStyleBackColor = true;
-            // 
-            // rbFail
-            // 
-            this.rbFail.AutoSize = true;
-            this.rbFail.Location = new System.Drawing.Point(323, 604);
-            this.rbFail.Name = "rbFail";
-            this.rbFail.Size = new System.Drawing.Size(50, 20);
-            this.rbFail.TabIndex = 193;
-            this.rbFail.TabStop = true;
-            this.rbFail.Text = "Fail";
-            this.rbFail.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(83, 654);
-            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 25);
-            this.label9.TabIndex = 194;
-            this.label9.Text = "Notes:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(167, 658);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(373, 113);
-            this.textBox1.TabIndex = 195;
-            // 
-            // btnClose
-            // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(153, 806);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(137, 36);
-            this.btnClose.TabIndex = 196;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblTitle
             // 
@@ -423,16 +336,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.rbFail);
-            this.Controls.Add(this.rbPass);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.gbTestType);
-            this.Controls.Add(this.btnSave);
             this.Name = "ctrlScheduledTest";
-            this.Size = new System.Drawing.Size(599, 908);
+            this.Size = new System.Drawing.Size(599, 605);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -443,20 +349,12 @@
             this.gbTestType.ResumeLayout(false);
             this.gbTestType.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton rbPass;
-        private System.Windows.Forms.RadioButton rbFail;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label1;

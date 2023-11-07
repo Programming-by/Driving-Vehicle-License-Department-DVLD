@@ -58,6 +58,7 @@ namespace DVLDWinForm.Tests
         private void FormListTestAppointments_Load(object sender, EventArgs e)
         {
             _LoadTestTypeImageAndTitle();
+
             ctrlDrivingLicenseApplicationInfo1.LoadApplicationInfoByLocalDrivingAppID(_LocalDrivingLicenseApplicationID);
             _dtLicenseTestAppointments = clsTestAppointment.GetApplicationTestAppointmentsPerTestType(_LocalDrivingLicenseApplicationID,_TestType);
             dgvLicenseTestAppointments.DataSource = _dtLicenseTestAppointments;
@@ -91,27 +92,24 @@ namespace DVLDWinForm.Tests
                 return;
             }
 
-            //clsTest LastTest = localDrivingLicenseApplication.GetLastTestPerTestType(_TestType);
+            clsTestData LastTest = LocalDrivingLicenseApplications.GetLastTestPerTestType(_TestType);
 
-            //if (LastTest == null)
-            //{
-            //    frmScheduleTest frm1 = new frmScheduleTest(_LocalDrivingLicenseApplicationID, _TestType);
-            //    frm1.ShowDialog();
-            //    frmListTestAppointments_Load(null, null);
-            //    return;
-            //}
+            if (LastTest == null)
+            {
+                FormScheduleTest frm1 = new FormScheduleTest(_LocalDrivingLicenseApplicationID, _TestType);
+                frm1.ShowDialog();
+                FormListTestAppointments_Load(null, null);
+                return;
+            }
 
 
-            //if (LastTest.TestResult == true)
-            //{
-            //    MessageBox.Show("This person already passed this test before, you can only retake faild test", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
+            if (LastTest.TestResult == true)
+            {
+                MessageBox.Show("This person already passed this test before, you can only retake faild test", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            //FormScheduleTest frm2 = new FormScheduleTest
-            //    (LastTest.TestAppointmentInfo.LocalDrivingLicenseApplicationID, _TestType);
-            //frm2.ShowDialog();
-            //FormListTestAppointments_Load(null, null);
+
 
             FormScheduleTest frm2 = new FormScheduleTest
             (_LocalDrivingLicenseApplicationID, _TestType);
@@ -132,9 +130,10 @@ namespace DVLDWinForm.Tests
 
         private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             int TestAppointmentID = (int)dgvLicenseTestAppointments.CurrentRow.Cells[0].Value;
 
-            FormTakeTest frm = new FormTakeTest(_LocalDrivingLicenseApplicationID, TestAppointmentID);
+            FormTakeTest frm = new FormTakeTest(TestAppointmentID, _TestType);
 
             frm.ShowDialog();
 
