@@ -70,17 +70,35 @@
     <Compile Include="Applications\Local Driving License Applications\FormLocalLicenseApplicationInfo.Designer.cs">
       <DependentUpon>FormLocalLicenseApplicationInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Drivers\FormShowAllDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drivers\FormShowAllDrivers.Designer.cs">
+      <DependentUpon>FormShowAllDrivers.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTest.Designer.cs">
       <DependentUpon>FormTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\Local Licenses\Controls\ctrlDriverLicenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\Local Licenses\Controls\ctrlDriverLicenseInfo.Designer.cs">
+      <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\FormIssueDriverLicenseFirstTime.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Licenses\FormIssueDriverLicenseFirstTime.Designer.cs">
       <DependentUpon>FormIssueDriverLicenseFirstTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\Local Licenses\FormShowLicenseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\Local Licenses\FormShowLicenseInfo.Designer.cs">
+      <DependentUpon>FormShowLicenseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="People\FormFindPerson.cs">
       <SubType>Form</SubType>
@@ -244,11 +262,20 @@
     <EmbeddedResource Include="Applications\Local Driving License Applications\FormLocalLicenseApplicationInfo.resx">
       <DependentUpon>FormLocalLicenseApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Drivers\FormShowAllDrivers.resx">
+      <DependentUpon>FormShowAllDrivers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTest.resx">
       <DependentUpon>FormTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Local Licenses\Controls\ctrlDriverLicenseInfo.resx">
+      <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Licenses\FormIssueDriverLicenseFirstTime.resx">
       <DependentUpon>FormIssueDriverLicenseFirstTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Local Licenses\FormShowLicenseInfo.resx">
+      <DependentUpon>FormShowLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\FormFindPerson.resx">
       <DependentUpon>FormFindPerson.cs</DependentUpon>
@@ -485,6 +512,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vision Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Licenses\Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

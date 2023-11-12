@@ -32,7 +32,7 @@
             this.ctrlApplicationBasicInfo1 = new DVLDWinForm.Applications.Controls.ctrlApplicationBasicInfo();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnIssueLicense = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -70,15 +70,15 @@
             this.txtNotes.Size = new System.Drawing.Size(783, 127);
             this.txtNotes.TabIndex = 175;
             // 
-            // btnSave
+            // btnIssueLicense
             // 
-            this.btnSave.Location = new System.Drawing.Point(698, 583);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(217, 48);
-            this.btnSave.TabIndex = 177;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnIssueLicense.Location = new System.Drawing.Point(698, 583);
+            this.btnIssueLicense.Name = "btnIssueLicense";
+            this.btnIssueLicense.Size = new System.Drawing.Size(217, 48);
+            this.btnIssueLicense.TabIndex = 177;
+            this.btnIssueLicense.Text = "Save";
+            this.btnIssueLicense.UseVisualStyleBackColor = true;
+            this.btnIssueLicense.Click += new System.EventHandler(this.btnIssueLicense_Click);
             // 
             // btnClose
             // 
@@ -96,13 +96,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1143, 654);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnIssueLicense);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.ctrlApplicationBasicInfo1);
             this.Controls.Add(this.ctrlDrivingLicenseApplicationInfo1);
             this.Name = "FormIssueDriverLicenseFirstTime";
-            this.Text = "FormIssueDriverLicenseFirstTime";
+            this.Text = "\\\\\\\\\\\\\\\\\\\\\\";
             this.Load += new System.EventHandler(this.FormIssueDriverLicenseFirstTime_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -115,7 +115,7 @@
         private Applications.Controls.ctrlApplicationBasicInfo ctrlApplicationBasicInfo1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNotes;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnIssueLicense;
         private System.Windows.Forms.Button btnClose;
     }
 }

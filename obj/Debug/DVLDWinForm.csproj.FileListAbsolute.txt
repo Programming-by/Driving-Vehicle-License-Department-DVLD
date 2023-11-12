@@ -43,3 +43,6 @@ C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormTest.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Tests.Controls.ctrlScheduledTest.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Tests.FormTakeTest.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Licenses.FormIssueDriverLicenseFirstTime.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Drivers.FormShowAllDrivers.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Licenses.Controls.ctrlDriverLicenseInfo.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Licenses.Local_Licenses.FormShowLicenseInfo.resources
