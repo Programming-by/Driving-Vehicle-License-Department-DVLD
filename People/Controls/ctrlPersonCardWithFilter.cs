@@ -51,7 +51,7 @@ namespace DVLDWinForm
             set
             {
                 _FilterEnabled = value;
-                //gbFilters.Enabled = _FilterEnabled;
+                gbFilters.Enabled = _FilterEnabled;
             }
         }
 

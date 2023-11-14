@@ -142,7 +142,7 @@ namespace DVLDWinForm
             }
 
 
-            if (clsLicenseClassData.IsLicenseExistByPersonID(ctrlPersonCardWithFilter1.PersonID , LicenseClassID))
+            if (clsLicenseData.IsLicenseExistByPersonID(ctrlPersonCardWithFilter1.PersonID , LicenseClassID))
             {
                 MessageBox.Show("Person already have a license with the same applied driving class, Choose different driving class", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

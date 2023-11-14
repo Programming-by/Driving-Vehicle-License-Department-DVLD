@@ -1,4 +1,7 @@
 ﻿using DVLDBusinessLayer;
+using DVLDWinForm.Applications.International_Driving_License_Application;
+using DVLDWinForm.Licenses;
+using DVLDWinForm.Licenses.Local_Licenses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +16,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DVLDWinForm
 {
-    public partial class FormInternationalDrivingLicenseApplications : Form
+    public partial class FormListInternationalDrivingLicenseApplications : Form
     {
-        public FormInternationalDrivingLicenseApplications()
+        public FormListInternationalDrivingLicenseApplications()
         {
             InitializeComponent();
         }
@@ -38,25 +41,25 @@ namespace DVLDWinForm
             {
 
             dgvApplications.Columns[0].HeaderText = "Int.License ID";
-            dgvApplications.Columns[0].Width = 110;
+            dgvApplications.Columns[0].Width = 160;
 
             dgvApplications.Columns[1].HeaderText = "Application ID";
-            dgvApplications.Columns[1].Width = 110;
+            dgvApplications.Columns[1].Width = 150;
 
             dgvApplications.Columns[2].HeaderText = "Driver ID";
-            dgvApplications.Columns[2].Width = 110;
+            dgvApplications.Columns[2].Width = 130;
 
             dgvApplications.Columns[3].HeaderText = "L.License ID";
-            dgvApplications.Columns[3].Width = 110;
+            dgvApplications.Columns[3].Width = 130;
 
             dgvApplications.Columns[4].HeaderText = "Issue Date";
-            dgvApplications.Columns[4].Width = 200;
+            dgvApplications.Columns[4].Width = 180;
 
             dgvApplications.Columns[5].HeaderText = "Expiration Date";
-            dgvApplications.Columns[5].Width = 200;
+            dgvApplications.Columns[5].Width = 180;
 
             dgvApplications.Columns[6].HeaderText = "Is Active";
-            dgvApplications.Columns[6].Width = 110;
+            dgvApplications.Columns[6].Width = 120;
 
             }
         }
@@ -118,9 +121,11 @@ namespace DVLDWinForm
 
         private void btnAddNewApplication_Click(object sender, EventArgs e)
         {
-            //FormNewDrivingLicenseApplication frm = new FormNewDrivingLicenseApplication();
+          FormNewInternationalLicenseApplication frm = new FormNewInternationalLicenseApplication();
 
-            //frm.ShowDialog();
+            frm.ShowDialog();
+
+            FormInternationalDrivingLicenseApplications_Load(null, null);
         }
 
         private void txtFilter1_KeyPress(object sender, KeyPressEventArgs e)
@@ -158,6 +163,36 @@ namespace DVLDWinForm
             _dtAllApplications.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, FilterValue);
 
         }
+
+        private void showPersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int DriverID = (int)dgvApplications.CurrentRow.Cells[2].Value;
+
+            int PersonID = clsDriverData.FindByDriverID(DriverID).PersonID;
+            FormShowPersonDetails frm = new FormShowPersonDetails(PersonID);
+
+            frm.ShowDialog();
+        }
+
+        private void showLicenseDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int InternationalLicenseID = (int)dgvApplications.CurrentRow.Cells[0].Value;
+            FormShowInternationalLicenseInfo frm = new FormShowInternationalLicenseInfo(InternationalLicenseID);
+
+            frm.ShowDialog();
+        }
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int DriverID = (int)dgvApplications.CurrentRow.Cells[2].Value;
+
+            int PersonID = clsDriverData.FindByDriverID(DriverID).PersonID;
+
+            FormShowPersonLicenseHistory frm = new FormShowPersonLicenseHistory(PersonID );
+
+            frm.ShowDialog();
+        }
+
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using DVLDBusinessLayer;
+using DVLDWinForm.Licenses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -116,6 +117,20 @@ namespace DVLDWinForm.Drivers
         {
                 if (cbFilters.Text == "Driver ID" || cbFilters.Text == "Person ID")
                     e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void showPersonInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormShowPersonDetails frm = new FormShowPersonDetails((int)dgvDrivers.CurrentRow.Cells[1].Value);
+            frm.ShowDialog();
+
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormShowPersonLicenseHistory frm = new FormShowPersonLicenseHistory((int)dgvDrivers.CurrentRow.Cells[1].Value);
+
+            frm.ShowDialog();
         }
     }
 }

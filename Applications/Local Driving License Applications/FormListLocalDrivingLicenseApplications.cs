@@ -298,9 +298,24 @@ namespace DVLDWinForm
 
         private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormShowPersonLicenseHistory frm = new FormShowPersonLicenseHistory();
+            int _LocalLicenseApplicationID = (int)dgvLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
 
+            clsLocalDrivingLicenseApplications _LocalLicenseApplication = clsLocalDrivingLicenseApplications.FindByLocalDrivingAppLicenseID(_LocalLicenseApplicationID);
+            int LicenseID = _LocalLicenseApplication.GetActiveLicenseID();
+
+            if (LicenseID != -1)
+            {
+
+            FormShowPersonLicenseHistory frm = new FormShowPersonLicenseHistory(_LocalLicenseApplication.ApplicantPersonID);
             frm.ShowDialog();
+                return;
+
+            } else
+            {
+                MessageBox.Show("No License Found!", "No License", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
         }
     }
 }

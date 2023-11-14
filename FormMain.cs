@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLDClasses;
+using DVLDWinForm.Applications.International_Driving_License_Application;
 using DVLDWinForm.Drivers;
 
 namespace DVLDWinForm
@@ -127,7 +128,7 @@ namespace DVLDWinForm
 
         private void ManageInternationaDrivingLicenseToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FormInternationalDrivingLicenseApplications frm = new FormInternationalDrivingLicenseApplications();
+            FormListInternationalDrivingLicenseApplications frm = new FormListInternationalDrivingLicenseApplications();
 
             frm.ShowDialog();
         }
@@ -135,6 +136,13 @@ namespace DVLDWinForm
         private void driversToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormShowAllDrivers frm = new FormShowAllDrivers();
+
+            frm.ShowDialog();
+        }
+
+        private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormNewInternationalLicenseApplication frm = new FormNewInternationalLicenseApplication();
 
             frm.ShowDialog();
         }

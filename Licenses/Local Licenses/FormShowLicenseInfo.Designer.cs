@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlDriverLicenseInfo1 = new DVLDWinForm.Licenses.Controls.ctrlDriverLicenseInfo();
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.ctrlDriverLicenseInfo1 = new DVLDWinForm.Licenses.Controls.ctrlDriverLicenseInfo();
             this.SuspendLayout();
-            // 
-            // ctrlDriverLicenseInfo1
-            // 
-            this.ctrlDriverLicenseInfo1.Location = new System.Drawing.Point(1, 4);
-            this.ctrlDriverLicenseInfo1.Name = "ctrlDriverLicenseInfo1";
-            this.ctrlDriverLicenseInfo1.Size = new System.Drawing.Size(862, 388);
-            this.ctrlDriverLicenseInfo1.TabIndex = 0;
             // 
             // btnClose
             // 
@@ -61,14 +54,21 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Driver License Info";
             // 
+            // ctrlDriverLicenseInfo1
+            // 
+            this.ctrlDriverLicenseInfo1.Location = new System.Drawing.Point(12, 60);
+            this.ctrlDriverLicenseInfo1.Name = "ctrlDriverLicenseInfo1";
+            this.ctrlDriverLicenseInfo1.Size = new System.Drawing.Size(1037, 455);
+            this.ctrlDriverLicenseInfo1.TabIndex = 36;
+            // 
             // FormShowLicenseInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 459);
+            this.ClientSize = new System.Drawing.Size(1077, 536);
+            this.Controls.Add(this.ctrlDriverLicenseInfo1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.ctrlDriverLicenseInfo1);
             this.Name = "FormShowLicenseInfo";
             this.Text = "FormShowLicenseInfo";
             this.Load += new System.EventHandler(this.FormShowLicenseInfo_Load);
@@ -79,8 +79,9 @@
 
         #endregion
 
-        private Controls.ctrlDriverLicenseInfo ctrlDriverLicenseInfo1;
+       // private Controls.ctrlDriverLicenseInfo ctrlDriverLicenseInfo1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
+        private Licenses.Controls.ctrlDriverLicenseInfo ctrlDriverLicenseInfo1;
     }
 }
