@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlDriverLicenseInfoWithFilter1 = new DVLDWinForm.Licenses.Local_Licenses.Controls.ctrlDriverLicenseInfoWithFilter();
             this.gpApplicationInfo = new System.Windows.Forms.GroupBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblLocalLicenseID = new System.Windows.Forms.Label();
@@ -58,6 +57,7 @@
             this.llShowLicenseHistory = new System.Windows.Forms.LinkLabel();
             this.btnIssueLicense = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.ctrlDriverLicenseInfoWithFilter1 = new DVLDWinForm.Licenses.Local_Licenses.Controls.ctrlDriverLicenseInfoWithFilter();
             this.gpApplicationInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -68,13 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ctrlDriverLicenseInfoWithFilter1
-            // 
-            this.ctrlDriverLicenseInfoWithFilter1.Location = new System.Drawing.Point(12, 25);
-            this.ctrlDriverLicenseInfoWithFilter1.Name = "ctrlDriverLicenseInfoWithFilter1";
-            this.ctrlDriverLicenseInfoWithFilter1.Size = new System.Drawing.Size(908, 463);
-            this.ctrlDriverLicenseInfoWithFilter1.TabIndex = 0;
             // 
             // gpApplicationInfo
             // 
@@ -367,6 +360,7 @@
             this.llShowLicenseInfo.TabIndex = 179;
             this.llShowLicenseInfo.TabStop = true;
             this.llShowLicenseInfo.Text = "Show Licenses Info";
+            this.llShowLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llShowLicenseInfo_LinkClicked);
             // 
             // llShowLicenseHistory
             // 
@@ -378,6 +372,7 @@
             this.llShowLicenseHistory.TabIndex = 178;
             this.llShowLicenseHistory.TabStop = true;
             this.llShowLicenseHistory.Text = "Show Licenses History";
+            this.llShowLicenseHistory.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llShowLicenseHistory_LinkClicked);
             // 
             // btnIssueLicense
             // 
@@ -406,6 +401,15 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // ctrlDriverLicenseInfoWithFilter1
+            // 
+            this.ctrlDriverLicenseInfoWithFilter1.FilterEnabled = true;
+            this.ctrlDriverLicenseInfoWithFilter1.Location = new System.Drawing.Point(12, 25);
+            this.ctrlDriverLicenseInfoWithFilter1.Name = "ctrlDriverLicenseInfoWithFilter1";
+            this.ctrlDriverLicenseInfoWithFilter1.Size = new System.Drawing.Size(908, 463);
+            this.ctrlDriverLicenseInfoWithFilter1.TabIndex = 0;
+            this.ctrlDriverLicenseInfoWithFilter1.OnLicenseSelected += new System.Action<int>(this.ctrlDriverLicenseInfoWithFilter1_OnLicenseSelected);
+            // 
             // FormNewInternationalLicenseApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -419,6 +423,8 @@
             this.Controls.Add(this.ctrlDriverLicenseInfoWithFilter1);
             this.Name = "FormNewInternationalLicenseApplication";
             this.Text = "FormNewInternationalLicenseApplication";
+            this.Activated += new System.EventHandler(this.FormNewInternationalLicenseApplication_Activated);
+            this.Load += new System.EventHandler(this.FormNewInternationalLicenseApplication_Load);
             this.gpApplicationInfo.ResumeLayout(false);
             this.gpApplicationInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();

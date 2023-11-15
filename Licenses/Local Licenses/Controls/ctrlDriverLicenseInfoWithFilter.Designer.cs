@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbFilters = new System.Windows.Forms.GroupBox();
             this.btnFind = new System.Windows.Forms.Button();
             this.txtLicenseID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.ctrlDriverLicenseInfo1 = new DVLDWinForm.Licenses.Controls.ctrlDriverLicenseInfo();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbFilters.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbFilters
@@ -69,6 +72,8 @@
             this.txtLicenseID.Name = "txtLicenseID";
             this.txtLicenseID.Size = new System.Drawing.Size(285, 22);
             this.txtLicenseID.TabIndex = 17;
+            this.txtLicenseID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLicenseID_KeyPress);
+            this.txtLicenseID.Validating += new System.ComponentModel.CancelEventHandler(this.txtLicenseID_Validating);
             // 
             // label7
             // 
@@ -88,6 +93,10 @@
             this.ctrlDriverLicenseInfo1.Size = new System.Drawing.Size(1037, 455);
             this.ctrlDriverLicenseInfo1.TabIndex = 23;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // ctrlDriverLicenseInfoWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -98,6 +107,7 @@
             this.Size = new System.Drawing.Size(930, 545);
             this.gbFilters.ResumeLayout(false);
             this.gbFilters.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -108,5 +118,6 @@
         private System.Windows.Forms.TextBox txtLicenseID;
         private System.Windows.Forms.Label label7;
         private Licenses.Controls.ctrlDriverLicenseInfo ctrlDriverLicenseInfo1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
