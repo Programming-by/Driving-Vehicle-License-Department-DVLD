@@ -76,6 +76,12 @@
     <Compile Include="Applications\Local Driving License Applications\FormLocalLicenseApplicationInfo.Designer.cs">
       <DependentUpon>FormLocalLicenseApplicationInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\Renew Local License\FormRenewLocalDrivingLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Renew Local License\FormRenewLocalDrivingLicenseApplication.Designer.cs">
+      <DependentUpon>FormRenewLocalDrivingLicenseApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="Drivers\FormShowAllDrivers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Local Driving License Applications\FormLocalLicenseApplicationInfo.resx">
       <DependentUpon>FormLocalLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Renew Local License\FormRenewLocalDrivingLicenseApplication.resx">
+      <DependentUpon>FormRenewLocalDrivingLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Drivers\FormShowAllDrivers.resx">
       <DependentUpon>FormShowAllDrivers.cs</DependentUpon>

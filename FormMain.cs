@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLDClasses;
 using DVLDWinForm.Applications.International_Driving_License_Application;
+using DVLDWinForm.Applications.Renew_Local_License;
 using DVLDWinForm.Drivers;
 
 namespace DVLDWinForm
@@ -143,6 +144,13 @@ namespace DVLDWinForm
         private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormNewInternationalLicenseApplication frm = new FormNewInternationalLicenseApplication();
+
+            frm.ShowDialog();
+        }
+
+        private void renewDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRenewLocalDrivingLicenseApplication frm = new FormRenewLocalDrivingLicenseApplication();
 
             frm.ShowDialog();
         }
