@@ -82,6 +82,12 @@
     <Compile Include="Applications\Renew Local License\FormRenewLocalDrivingLicenseApplication.Designer.cs">
       <DependentUpon>FormRenewLocalDrivingLicenseApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\Replace For Damaged License\FormReplaceForDamagedOrLostLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Replace For Damaged License\FormReplaceForDamagedOrLostLicense.Designer.cs">
+      <DependentUpon>FormReplaceForDamagedOrLostLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Drivers\FormShowAllDrivers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Renew Local License\FormRenewLocalDrivingLicenseApplication.resx">
       <DependentUpon>FormRenewLocalDrivingLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Replace For Damaged License\FormReplaceForDamagedOrLostLicense.resx">
+      <DependentUpon>FormReplaceForDamagedOrLostLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Drivers\FormShowAllDrivers.resx">
       <DependentUpon>FormShowAllDrivers.cs</DependentUpon>

@@ -53,3 +53,4 @@ C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.CopyComplete
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.exe
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.pdb
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Applications.Renew_Local_License.FormRenewLocalDrivingLicenseApplication.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Applications.Replace_For_Damaged_License.FormReplaceForDamagedOrLostLicense.resources
