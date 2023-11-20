@@ -12,6 +12,7 @@ using DVLDWinForm.Applications.International_Driving_License_Application;
 using DVLDWinForm.Applications.Renew_Local_License;
 using DVLDWinForm.Applications.Replace_For_Damaged_License;
 using DVLDWinForm.Drivers;
+using DVLDWinForm.Licenses.Detain_License;
 
 namespace DVLDWinForm
 {
@@ -161,6 +162,24 @@ namespace DVLDWinForm
             FormReplaceForDamagedOrLostLicense frm = new FormReplaceForDamagedOrLostLicense();
 
             frm.ShowDialog();
+        }
+
+        private void ManageDetainedLicensestoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void detainLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDetainLicense frm = new FormDetainLicense();    
+
+            frm.ShowDialog();
+
+        }
+
+        private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

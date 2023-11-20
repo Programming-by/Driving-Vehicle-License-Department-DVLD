@@ -112,6 +112,12 @@
     <Compile Include="Licenses\ctrlDriverLicenses.Designer.cs">
       <DependentUpon>ctrlDriverLicenses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\Detain License\FormDetainLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\Detain License\FormDetainLicense.Designer.cs">
+      <DependentUpon>FormDetainLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\International Licenses\FormShowInternationalLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -330,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\ctrlDriverLicenses.resx">
       <DependentUpon>ctrlDriverLicenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Detain License\FormDetainLicense.resx">
+      <DependentUpon>FormDetainLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\International Licenses\FormShowInternationalLicenseInfo.resx">
       <DependentUpon>FormShowInternationalLicenseInfo.cs</DependentUpon>

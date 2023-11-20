@@ -40,9 +40,9 @@ namespace DVLDWinForm.Applications.Replace_For_Damaged_License
         private enIssueReason _GetIssueReason()
         {
             if (rbDamagedLicense.Checked)
-                return clsLicenseData.enIssueReason.ReplacementForDamaged;
+                return clsLicenseData.enIssueReason.DamagedReplacement;
             else
-                return clsLicenseData.enIssueReason.ReplacementForLost;
+                return clsLicenseData.enIssueReason.LostReplacement;
         }
 
         private void btnIssueReplacement_Click(object sender, EventArgs e)
