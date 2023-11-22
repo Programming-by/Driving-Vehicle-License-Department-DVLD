@@ -17,8 +17,7 @@ namespace  DVLDWinForm.Licenses.Local_Licenses.Controls
         public event Action<int> OnLicenseSelected;
         protected virtual void LicenseSelected(int LicenseID)
         {
-            Action <int> handler = OnLicenseSelected;
-
+            Action<int> handler = OnLicenseSelected;
             if (handler != null)
             {
                 handler(LicenseID);
@@ -63,13 +62,12 @@ namespace  DVLDWinForm.Licenses.Local_Licenses.Controls
 
         public void LoadLicenseInfo(int LicenseID)
         {
+
             txtLicenseID.Text = LicenseID.ToString();
             ctrlDriverLicenseInfo1.LoadInfo(LicenseID);
             _LicenseID = ctrlDriverLicenseInfo1.LicenseID;
             if (OnLicenseSelected != null && FilterEnabled)
-            {
-                OnLicenseSelected(LicenseID);
-            }
+                OnLicenseSelected(_LicenseID);
         }
         private void btnFind_Click(object sender, EventArgs e)
         {
@@ -82,7 +80,6 @@ namespace  DVLDWinForm.Licenses.Local_Licenses.Controls
 
             }
                 _LicenseID = int.Parse(txtLicenseID.Text);
-
                 LoadLicenseInfo(_LicenseID);
         }
 
@@ -104,15 +101,16 @@ namespace  DVLDWinForm.Licenses.Local_Licenses.Controls
 
         private void txtLicenseID_Validating(object sender, CancelEventArgs e)
         {
+
             if (string.IsNullOrEmpty(txtLicenseID.Text))
             {
                 e.Cancel = true;
-                errorProvider1.SetError( txtLicenseID , "License cannot be empty");
-            } else
+                errorProvider1.SetError(txtLicenseID, "License cannot be empty");
+            }
+            else
             {
                 errorProvider1.SetError(txtLicenseID, null);
             }
-
         }
     }
 }

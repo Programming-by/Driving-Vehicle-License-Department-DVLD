@@ -13,6 +13,7 @@ using DVLDWinForm.Applications.Renew_Local_License;
 using DVLDWinForm.Applications.Replace_For_Damaged_License;
 using DVLDWinForm.Drivers;
 using DVLDWinForm.Licenses.Detain_License;
+using DVLDWinForm.Applications.Release_License;
 
 namespace DVLDWinForm
 {
@@ -166,7 +167,9 @@ namespace DVLDWinForm
 
         private void ManageDetainedLicensestoolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            FormListDetainedLicenses frm = new FormListDetainedLicenses();
 
+            frm.ShowDialog();
         }
 
         private void detainLicenseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -179,6 +182,8 @@ namespace DVLDWinForm
 
         private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FormReleaseLicense frm = new FormReleaseLicense();
+            frm.ShowDialog();
 
         }
     }
