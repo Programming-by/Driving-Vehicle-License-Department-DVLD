@@ -1,10 +1,7 @@
 ﻿using DVLDBusinessLayer;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
+using Microsoft.Win32;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -16,25 +13,24 @@ namespace DVLDClasses
 
         public static bool RememberUserNameAndPassword(string UserName , string Password)
         {
+
+            string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD";
+
+            string valueNameOfUserName = "UserName";
+            string valueDataOfUserName = UserName;
+
+            string valueNameOfPassword = "Password";
+            string valueDataOfPassword = Password;
+
             try
             {
-                string currentDirectory = Directory.GetCurrentDirectory();
 
-                string filePath = currentDirectory + "\\data.txt";
+                Registry.SetValue(keyPath,valueNameOfUserName,valueDataOfUserName, RegistryValueKind.String);
 
-                if (UserName == "" && File.Exists(filePath))
-                {
-                    File.Delete(filePath);
-                    return true;
-                }
-
-                string dataToSave = UserName + "#//#" + Password;
-
-                using (StreamWriter writer = new StreamWriter(filePath))
-                {
-                    writer.WriteLine(dataToSave);
-                    return true;
-                }
+                Registry.SetValue(keyPath,valueNameOfPassword,valueDataOfPassword, RegistryValueKind.String);
+           
+                return true;
+        
             }
             catch (Exception ex)
             {
