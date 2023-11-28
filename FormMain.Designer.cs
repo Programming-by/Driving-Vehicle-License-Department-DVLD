@@ -288,7 +288,7 @@
             this.peopleToolStripMenuItem.Name = "peopleToolStripMenuItem";
             this.peopleToolStripMenuItem.Size = new System.Drawing.Size(153, 68);
             this.peopleToolStripMenuItem.Text = "People";
-            this.peopleToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            this.peopleToolStripMenuItem.Click += new System.EventHandler(this.peopleToolStripMenuItem_Click_1);
             // 
             // driversToolStripMenuItem
             // 

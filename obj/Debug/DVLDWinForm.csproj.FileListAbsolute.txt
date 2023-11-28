@@ -16,7 +16,6 @@ C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Applications.Releas
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Applications.Renew_Local_License.FormRenewLocalDrivingLicenseApplication.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Applications.Replace_For_Damaged_License.FormReplaceForDamagedOrLostLicense.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Drivers.FormShowAllDrivers.resources
-C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.FormTest.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Licenses.Controls.ctrlDriverInternationalLicenseInfo.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Licenses.ctrlDriverLicenses.resources
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Licenses.Detain_License.FormDetainLicense.resources

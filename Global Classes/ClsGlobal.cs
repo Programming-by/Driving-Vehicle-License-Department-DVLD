@@ -1,6 +1,7 @@
 ﻿using DVLDBusinessLayer;
 using System;
 using System.IO;
+using System.Diagnostics;
 using Microsoft.Win32;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -11,30 +12,34 @@ namespace DVLDClasses
     {
         public static clsUserData CurrentUser;
 
+       public const string sourceName = "DVLD";
+       public const string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD";
+
         public static bool RememberUserNameAndPassword(string UserName , string Password)
         {
 
-            string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD";
-
-            string valueNameOfUserName = "UserName";
-            string valueDataOfUserName = UserName;
-
-            string valueNameOfPassword = "Password";
-            string valueDataOfPassword = Password;
+            if (!EventLog.SourceExists(sourceName))
+            {
+               EventLog.CreateEventSource(sourceName, "Application");
+            }
 
             try
             {
 
-                Registry.SetValue(keyPath,valueNameOfUserName,valueDataOfUserName, RegistryValueKind.String);
+                Registry.SetValue(keyPath,"UserName",UserName, RegistryValueKind.String);
 
-                Registry.SetValue(keyPath,valueNameOfPassword,valueDataOfPassword, RegistryValueKind.String);
-           
+                Registry.SetValue(keyPath,"Password",Password, RegistryValueKind.String);
+
+                EventLog.WriteEntry(sourceName, "Username and Password has been remembered", EventLogEntryType.Information);
+
                 return true;
         
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
+                EventLog.WriteEntry(sourceName, ex.Message , EventLogEntryType.Error);
+
                 return false;
             }
 
@@ -42,17 +47,21 @@ namespace DVLDClasses
 
         public static bool GetStoredCredential(ref string UserName ,ref string Password)
         {
-            string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD";
-            string valueNameOfUserName = "UserName";
-            string valueNameOfPassword = "Password";
+
+            if (!EventLog.SourceExists(sourceName))
+            {
+               EventLog.CreateEventSource(sourceName, "Application");
+                
+            }
 
             try
             {
-              UserName = Registry.GetValue(keyPath, valueNameOfUserName,null) as string;
-              Password = Registry.GetValue(keyPath, valueNameOfPassword, null) as string;
+              UserName = Registry.GetValue(keyPath, "UserName",null) as string;
+              Password = Registry.GetValue(keyPath, "Password", null) as string;
                
                 if (UserName != null || Password != null)
                 {
+                 EventLog.WriteEntry(sourceName, "the saved Username and Password has been loaded in to the System", EventLogEntryType.Information);
                     return true;
                 } else
                 {
@@ -63,6 +72,8 @@ namespace DVLDClasses
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
+                EventLog.WriteEntry(sourceName, ex.Message, EventLogEntryType.Error);
+
                 return false;
             }
         }

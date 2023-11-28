@@ -92,13 +92,7 @@ namespace DVLDWinForm
 
         }
 
-
-        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormChangePassword frm = new FormChangePassword(clsGlobal.CurrentUser.UserID);
-
-            frm.ShowDialog();
-        }
+ 
 
         private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -185,6 +179,19 @@ namespace DVLDWinForm
             FormReleaseLicense frm = new FormReleaseLicense();
             frm.ShowDialog();
 
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+                FormChangePassword frm = new FormChangePassword(clsGlobal.CurrentUser.UserID);
+
+                frm.ShowDialog();
+        }
+
+        private void peopleToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FormShowAllPeople frm = new FormShowAllPeople();
+            frm.ShowDialog();
         }
     }
 }
