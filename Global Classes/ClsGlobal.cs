@@ -42,36 +42,23 @@ namespace DVLDClasses
 
         public static bool GetStoredCredential(ref string UserName ,ref string Password)
         {
+            string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD";
+            string valueNameOfUserName = "UserName";
+            string valueNameOfPassword = "Password";
+
             try
             {
-                string currentDirectory = Directory.GetCurrentDirectory();
-
-                string filePath = currentDirectory + "\\data.txt";
-
-                if (File.Exists(filePath))
+              UserName = Registry.GetValue(keyPath, valueNameOfUserName,null) as string;
+              Password = Registry.GetValue(keyPath, valueNameOfPassword, null) as string;
+               
+                if (UserName != null || Password != null)
                 {
-                    using (StreamReader reader = new StreamReader(filePath))
-                    {
-                        string line;
-                        while ((line = reader.ReadLine()) != null)
-                        {
-                            Console.WriteLine(line); // Output each line of data to the console
-                            string[] result = line.Split(new string[] { "#//#" }, StringSplitOptions.None);
-
-                            UserName = result[0];
-                            Password = result[1];
-                        }
-                        return true;
-
-                    }
-
-
-
-                }
-                else
+                    return true;
+                } else
                 {
                     return false;
                 }
+
             }
             catch (Exception ex)
             {
