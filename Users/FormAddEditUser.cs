@@ -1,13 +1,10 @@
 ﻿using DVLDBusinessLayer;
 using System;
-using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text;
+using DVLDClasses;
 
 namespace DVLDWinForm
 {
@@ -225,9 +222,11 @@ namespace DVLDWinForm
                 return;
             }
 
+
             _User.PersonID = ctrlPersonCardWithFilter1.PersonID;
             _User.UserName = txtUserName.Text;
-            _User.Password = txtPassword.Text;
+            _User.Password = clsGlobal.ComputeHash(txtPassword.Text);
+
             _User.IsActive = chkIsActive.Checked == true ? true : false;
 
             if (_User.Save())

@@ -28,7 +28,6 @@ namespace DVLDWinForm
         {
             this.Close();
         }
-
         private void _ResetDefaultValues()
         {
             txtCurrentPassword.Text = "";
@@ -69,7 +68,7 @@ namespace DVLDWinForm
                 errorProvider1.SetError(txtCurrentPassword, "");
             }
 
-            if (txtCurrentPassword.Text.Trim() != _User.Password)
+            if (clsGlobal.ComputeHash(txtCurrentPassword.Text.Trim()) != _User.Password)
             {
                 e.Cancel = true;
                 txtCurrentPassword.Focus();
@@ -118,7 +117,7 @@ namespace DVLDWinForm
                 return;
             }
 
-            _User.Password = txtNewPassword.Text;
+            _User.Password = clsGlobal.ComputeHash(txtNewPassword.Text);
 
             if (_User.Save())
             {
