@@ -24,7 +24,6 @@ namespace DVLDWinForm
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-          
         clsUserData User = clsUserData.FindByUserNameAndPassword(txtUserName.Text, clsGlobal.ComputeHash(txtPassword.Text));
 
             if (User != null)
