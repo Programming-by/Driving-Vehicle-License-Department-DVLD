@@ -142,7 +142,6 @@ namespace DVLDWinForm
             FormAddUpdatePerson frm1 = new FormAddUpdatePerson();
 
             frm1.DataBack += DataBackEvent;
-
             frm1.ShowDialog();
         }
 

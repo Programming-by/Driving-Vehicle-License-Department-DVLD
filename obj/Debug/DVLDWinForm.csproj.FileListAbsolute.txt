@@ -56,3 +56,5 @@ C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.csproj.CopyComplete
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.exe
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.pdb
 C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Applications.Release_License.FormListDetainedLicenses.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Cars.FormAddEditCar.resources
+C:\Users\User\Source\Repos\DVLDWinForm\obj\Debug\DVLDWinForm.Cars.FormListAllCars.resources

@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Drawing;
+
 namespace DVLDWinForm.Properties
 {
 
@@ -26,5 +28,7 @@ namespace DVLDWinForm.Properties
                 return defaultInstance;
             }
         }
+
+        public Color FormsBackgroundColor { get; internal set; }
     }
 }

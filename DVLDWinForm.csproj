@@ -103,6 +103,18 @@
     <Compile Include="Applications\Replace For Damaged License\FormReplaceForDamagedOrLostLicense.Designer.cs">
       <DependentUpon>FormReplaceForDamagedOrLostLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cars\FormAddEditCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cars\FormAddEditCar.Designer.cs">
+      <DependentUpon>FormAddEditCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cars\FormListAllCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cars\FormListAllCars.Designer.cs">
+      <DependentUpon>FormListAllCars.cs</DependentUpon>
+    </Compile>
     <Compile Include="Drivers\FormShowAllDrivers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +351,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Replace For Damaged License\FormReplaceForDamagedOrLostLicense.resx">
       <DependentUpon>FormReplaceForDamagedOrLostLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cars\FormAddEditCar.resx">
+      <DependentUpon>FormAddEditCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cars\FormListAllCars.resx">
+      <DependentUpon>FormListAllCars.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Drivers\FormShowAllDrivers.resx">
       <DependentUpon>FormShowAllDrivers.cs</DependentUpon>
@@ -615,6 +633,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IconLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cars.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

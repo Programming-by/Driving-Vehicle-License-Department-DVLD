@@ -16,6 +16,7 @@ namespace DVLDWinForm.Drivers
     {
         private DataTable _dtAllDrivers;
 
+        Color _Color;
         public FormShowAllDrivers()
         {
             InitializeComponent();
