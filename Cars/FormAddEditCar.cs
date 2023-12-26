@@ -155,6 +155,31 @@ namespace DVLDWinForm.Cars
         }
         private void _LoadData()
         {
+            _CarDetails = clsCarDetail.Find(_CarDetailsID);
+
+            if (_CarDetails == null )
+            {
+                MessageBox.Show("this Record is not found","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            lblVehicleID.Text = _CarDetails.VehicleID.ToString();
+            cbVehicleName.SelectedIndex = cbVehicleName.FindString(clsVehicle.Find(_CarDetails.VehicleID).VehicleName);
+            cbMake.SelectedIndex = cbMake.FindString(clsMake.Find(_CarDetails.MakeID).MakeName);
+            cbModel.SelectedIndex = cbModel.FindString(clsModel.Find(_CarDetails.ModelID).ModelName);
+            cbSubModel.SelectedIndex = cbSubModel.FindString(clsSubmodel.Find(_CarDetails.SubmodelID).SubModelName);
+            cbBody.SelectedIndex = cbBody.FindString(clsBody.Find(_CarDetails.BodyID).BodyName);
+            cbDriverType.SelectedIndex = cbDriverType.FindString(clsDriveType.Find(_CarDetails.DriveTypeID).DriveTypeName);
+            cbFuelType.SelectedIndex = cbFuelType.FindString(clsFuelType.Find(_CarDetails.FuelTypeID).FuelTypeName);
+            cbEngine.SelectedIndex = cbEngine.FindString(clsEngine.Find(_CarDetails.EngineID).Engine);
+            cbYear.SelectedIndex = cbYear.FindString(clsYear.Find(_CarDetails.YearID).Year);
+
+            txtRentalPricePerDay.Text = _CarDetails.RentalPricePerDay.ToString();
+            numericNumberOfDoors.Value = _CarDetails.NumberOfDoors;
+            txtPlateNumber.Text = _CarDetails.PlateNumber;
+            txtMileage.Text = _CarDetails.Mileage.ToString();
+            chkAvailableForRent.Checked = _CarDetails.IsAvailableForRent;
+
+
 
         }
         private void FormAddEditCar_Load(object sender, EventArgs e)
