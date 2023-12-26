@@ -37,8 +37,6 @@ namespace DVLDWinForm.Cars
         {
             this.Close();
         }
-
-
         private void _FillVehicleNames()
         {
             DataTable dtVehicles = clsVehicle.GetAllVehicles();
@@ -49,7 +47,6 @@ namespace DVLDWinForm.Cars
             }
             cbVehicleName.SelectedIndex = 0;
         }
-
         private void _FillMakeNames()
         {
             DataTable dtMakes = clsMake.GetAllMakes();
@@ -70,7 +67,6 @@ namespace DVLDWinForm.Cars
             }
             cbModel.SelectedIndex = 0;  
         }
-
         private void _FillSubModelNames()
         {
             DataTable dtSubModels = clsSubmodel.GetAllSubModels();
@@ -81,7 +77,6 @@ namespace DVLDWinForm.Cars
             }
             cbSubModel.SelectedIndex = 0;
         }
-
         private void _FillBodyNames()
         {
             DataTable dtBodies = clsBody.GetAllBodies();
@@ -92,7 +87,6 @@ namespace DVLDWinForm.Cars
             }
             cbBody.SelectedIndex = 0;
         }
-
         private void _FillDriveTypeNames()
         {
             DataTable dtDriveTypes = clsDriveType.GetAllDriveTypes();
@@ -103,7 +97,6 @@ namespace DVLDWinForm.Cars
             }
             cbDriverType.SelectedIndex = 0;
         }
-
         private void _FillFuelTypeNames()
         {
             DataTable dtFuelTypes = clsFuelType.GetAllFuelTypes();
@@ -114,7 +107,6 @@ namespace DVLDWinForm.Cars
             }
             cbFuelType.SelectedIndex = 0;
         }
-
         private void _FillEngineList()
         {
             DataTable dtEngines = clsEngine.GetAllEngines();
@@ -125,7 +117,6 @@ namespace DVLDWinForm.Cars
             }
             cbEngine.SelectedIndex = 0;
         }
-
         private void _FillYearList()
         {
             DataTable dtYears= clsYear.GetAllYears();
@@ -136,7 +127,6 @@ namespace DVLDWinForm.Cars
             }
             cbYear.SelectedIndex = cbYear.Items.Count - 1;
         }
-
         private void _FillComboBoxes()
         {
             _FillVehicleNames();
@@ -149,7 +139,6 @@ namespace DVLDWinForm.Cars
             _FillEngineList();
             _FillYearList();
         }
-       
         private void _ResetDefaultValues()
         {
             if (Mode == enMode.AddNew)
@@ -175,40 +164,6 @@ namespace DVLDWinForm.Cars
             _ResetDefaultValues();
             if (Mode == enMode.Update)
                 _LoadData();
-
-        }
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            _CarDetails.VehicleID = cbVehicleName.FindString(cbVehicleName.Text);   
-            _CarDetails.MakeID = cbMake.FindString(cbMake.Text);
-            _CarDetails.ModelID = cbModel.FindString(cbModel.Text);
-            _CarDetails.SubmodelID = cbSubModel.FindString(cbSubModel.Text);
-            _CarDetails.BodyID = cbBody.FindString(cbBody.Text);
-            _CarDetails.DriveTypeID = cbDriverType.FindString(cbDriverType.Text);
-            _CarDetails.FuelTypeID = cbFuelType.FindString(cbFuelType.Text);
-            _CarDetails.EngineID = cbEngine.FindString(cbEngine.Text);
-            _CarDetails.YearID = cbYear.FindString(cbYear.Text);
-
-             _CarDetails.RentalPricePerDay = int.Parse(txtRentalPricePerDay.Text);
-
-             _CarDetails.NumberOfDoors = (short) numericNumberOfDoors.Value;
-
-             _CarDetails.PlateNumber = txtPlateNumber.Text;
-
-            _CarDetails.Mileage = decimal.Parse(txtMileage.Text);
-
-
-
-            if (_CarDetails.Save())
-            {
-                lblVehicleID.Text = _CarDetails.CarDetailID.ToString();
-                Mode = enMode.Update;
-                lblTitle.Text = "Update Car";
-                this.Text = "Update Car";
-                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -254,6 +209,49 @@ namespace DVLDWinForm.Cars
         private void txtMileage_KeyPress(object sender, KeyPressEventArgs e)
         {
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            int VehicleID = clsVehicle.Find(cbVehicleName.Text).VehicleID;
+            int MakeID = clsMake.Find(cbMake.Text).MakeID;
+            int ModelID = clsModel.Find(cbModel.Text).ModelID;
+            int SubmodelID = clsSubmodel.Find(cbSubModel.Text).SubModelID;
+            int BodyID = clsBody.Find(cbBody.Text).BodyID;
+            int DriveTypeID = clsDriveType.Find(cbDriverType.Text).DriveTypeID;
+            int FuelTypeID = clsFuelType.Find(cbFuelType.Text).FuelTypeID;
+            int EngineID = clsEngine.Find(cbEngine.Text).EngineID;
+            int YearID = clsYear.Find(cbYear.Text).YearID;
+            _CarDetails.VehicleID = VehicleID;   
+            _CarDetails.MakeID = MakeID;
+            _CarDetails.ModelID = ModelID;
+            _CarDetails.SubmodelID = SubmodelID;
+            _CarDetails.BodyID = BodyID;
+            _CarDetails.DriveTypeID = DriveTypeID;
+            _CarDetails.FuelTypeID = FuelTypeID;
+            _CarDetails.EngineID = EngineID;
+            _CarDetails.YearID = YearID;
+
+             _CarDetails.RentalPricePerDay = int.Parse(txtRentalPricePerDay.Text);
+
+             _CarDetails.NumberOfDoors = (short) numericNumberOfDoors.Value;
+
+             _CarDetails.PlateNumber = txtPlateNumber.Text;
+
+            _CarDetails.Mileage = decimal.Parse(txtMileage.Text);
+
+
+
+            if (_CarDetails.Save())
+            {
+                lblVehicleID.Text = _CarDetails.CarDetailID.ToString();
+                Mode = enMode.Update;
+                lblTitle.Text = "Update Car";
+                this.Text = "Update Car";
+                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
     }
 
